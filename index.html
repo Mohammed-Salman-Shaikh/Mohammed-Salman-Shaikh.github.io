@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mohammed Salman Shaikh - Java Backend Developer, Java + Spring Boot, Capgemini, Bangalore">
+  <meta name="color-scheme" content="light dark">
+  <title>Mohammed Salman Shaikh | Java Backend Developer</title>
+  <script>
+    // Apply saved theme before paint (avoids a flash of the wrong theme)
+    (function () {
+      var d = document.documentElement;
+      d.classList.remove('no-js'); d.classList.add('js');
+      try { var t = localStorage.getItem('theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-shot="hero">
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- Live 3D system graph: built from the Skills section below -->
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <nav class="topnav" aria-label="Primary">
+    <a href="#top" class="brand" aria-label="Back to top">
+      <span class="brand-mark" aria-hidden="true">MS</span>
+      <span class="brand-name">Mohammed Salman</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" data-nav="about">About</a></li>
+      <li><a href="#experience" data-nav="experience">Experience</a></li>
+      <li><a href="#projects" data-nav="projects">Projects</a></li>
+      <li><a href="#skills" data-nav="skills">Skills</a></li>
+      <li><a href="#education" data-nav="education">Education</a></li>
+      <li><a href="#contact" data-nav="contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="motion-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Pause motion" title="Pause / play motion">
+        <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 7 5.5z"/></svg>
+      </button>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top" data-shot="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow hero-eyebrow">
+        <span class="pulse" aria-hidden="true"></span>
+        <span class="prompt" aria-hidden="true">&gt;</span>
+        <span id="typer" data-roles="Software Engineer · Capgemini|Java Backend Developer|Adobe Certified AEM Professional|AWS Certified Cloud Practitioner">Software Engineer &middot; Capgemini</span><span class="caret" aria-hidden="true"></span>
+      </p>
+      <h1 class="hero-name">Mohammed Salman Shaikh</h1>
+      <p class="hero-headline">Java Backend Developer, 2+ years, Java + Spring Boot, Capgemini, Bangalore</p>
+      <div class="hero-links">
+        <a href="mailto:salmanmohammed703@gmail.com" class="btn btn-primary">
+          Email me
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mohammed--salman/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+        <a href="https://github.com/Mohammed-Salman-Shaikh" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+      </div>
+    </div>
+    <div class="container hero-foot">
+      <p class="hud" aria-hidden="true"><span class="hud-dot"></span><span id="hud-text">skill graph</span></p>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+        <span>Scroll</span><span class="scroll-line" aria-hidden="true"></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section" data-shot="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">01</span> About</p>
+          <h2 class="section-title">About</h2>
+        </div>
+        <div class="panel about-panel reveal">
+          <p class="lead">
+            Java Backend Developer with 2+ years of experience building server-side applications with Core Java (OOP), Spring Boot, Hibernate/JPA and RESTful APIs, working with MySQL and MongoDB. Experienced in JUnit testing, Git, Maven, and Jenkins CI/CD with Microsoft Azure deployments, working with cross-functional teams for a multinational client. Adobe Certified AEM Professional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section" data-shot="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">02</span> Experience</p>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-node" aria-hidden="true"></span>
+            <article class="panel">
+              <header class="panel-head">
+                <div>
+                  <h3 class="panel-title">Software Engineer</h3>
+                  <p class="panel-org">Capgemini</p>
+                </div>
+                <p class="panel-meta">June 2024 to Present<br><span>Bangalore, India</span></p>
+              </header>
+              <ul class="bullets">
+                <li>Designed, built and maintained backend services in Java and Spring Boot for Atlas Copco's global career portal, supporting job listing and application workflows for a multinational client.</li>
+                <li>Designed and exposed RESTful APIs using Sling servlets and OSGi-based modular Java services, keeping business logic reusable and decoupled.</li>
+                <li>Contributed to microservices-based systems built with Java, Spring and Node.js, integrating backend functionality across service boundaries.</li>
+                <li>Wrote and maintained JUnit test suites to validate business logic, catch regressions early and improve code reliability.</li>
+                <li>Engineered an automated job-expiry feature for the career portal, improving data accuracy and reducing manual content maintenance.</li>
+                <li>Designed an event-driven asset-publish notification system, automating stakeholder alerts on content updates.</li>
+                <li>Deployed, configured and monitored applications on Microsoft Azure, working on Maven/Jenkins CI/CD pipelines with Git version control to streamline releases.</li>
+                <li>Implemented role-based access control and security policies, managing user permissions in line with best practices.</li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="projects" class="section" data-shot="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">03</span> Projects</p>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <article class="panel project reveal">
+          <div class="project-top">
+            <div>
+              <h3 class="panel-title project-title">ChatIQ <span class="dash">&mdash;</span> AI Chat Application</h3>
+              <ul class="chips" aria-label="Stack">
+                <li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li><li>OpenAI API</li><li>JWT</li><li>Material-UI</li>
+              </ul>
+            </div>
+            <p class="panel-meta">Nov 2023</p>
+          </div>
+          <ul class="bullets">
+            <li>Full-stack AI chatbot built on the MERN stack (MongoDB, Express, React, Node.js), integrating the OpenAI API for real-time conversational responses.</li>
+            <li>Secure JWT-based authentication with persistent HTTP-cookie sessions.</li>
+            <li>MongoDB schema and backend APIs to store and manage user chat history, with user-controlled deletion.</li>
+            <li>Responsive Material-UI interface that renders code blocks.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section" data-shot="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">04</span> Skills</p>
+          <h2 class="section-title">Skills</h2>
+          <p class="section-hint js-only">Hover, focus or tap a group to find it in the 3D graph behind this page.</p>
+        </div>
+        <div class="skills-layout">
+        <div class="skills-grid">
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">Languages</h3>
+            <ul class="chips"><li>Java</li><li>Core Java</li><li>OOP</li><li>Collections</li><li>Exception Handling</li><li>SQL</li><li>JavaScript</li></ul>
+          </div>
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">Backend &amp; Frameworks</h3>
+            <ul class="chips"><li>Spring Boot</li><li>Hibernate</li><li>JPA</li><li>Spring MVC</li><li>RESTful API Design</li><li>Microservices</li><li>Node.js</li></ul>
+          </div>
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">Databases</h3>
+            <ul class="chips"><li>MySQL</li><li>MongoDB</li></ul>
+          </div>
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">CS Fundamentals</h3>
+            <ul class="chips"><li>Data Structures</li><li>Algorithms</li><li>Object-Oriented Design</li></ul>
+          </div>
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">Testing</h3>
+            <ul class="chips"><li>JUnit</li><li>Unit Testing</li></ul>
+          </div>
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">Build &amp; DevOps</h3>
+            <ul class="chips"><li>Git</li><li>GitHub</li><li>Maven</li><li>Jenkins</li><li>CI/CD Pipelines</li><li>Microsoft Azure</li><li>AWS</li></ul>
+          </div>
+          <div class="skill-group reveal" tabindex="0">
+            <h3 class="skill-heading">Other</h3>
+            <ul class="chips"><li>AEM 6.5</li><li>OSGi</li><li>Sling Servlets</li><li>JCR</li><li>Groovy</li><li>React.js</li><li>HTML</li><li>CSS</li></ul>
+          </div>
+        </div>
+        <div class="skills-viewport js-only" aria-hidden="true"><span id="viewport-label">live graph · pick a group</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section" data-shot="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">05</span> Education</p>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <article class="panel reveal">
+          <header class="panel-head">
+            <div>
+              <h3 class="panel-title">Bachelor of Technology, Computer Engineering</h3>
+              <p class="panel-org">Presidency University, Bangalore</p>
+            </div>
+            <p class="panel-meta">Aug 2019 to June 2023</p>
+          </header>
+        </article>
+
+        <h3 class="subhead reveal">Certifications / Achievements</h3>
+        <div class="cert-grid">
+          <article class="panel cert reveal">
+            <span class="cert-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 21.5l-2.6-1.9-3.2.1-1-3L2.6 14.8l1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path class="tick" d="M8.5 12.2l2.3 2.3 4.7-4.8"/></svg>
+            </span>
+            <h4 class="cert-title">Adobe Certified Professional — Adobe Experience Manager (AEM)</h4>
+            <a href="https://certification.adobe.com/credential/verify/1ea7d9d0-df6f-11ef-9883-42010a40002a" target="_blank" rel="noopener noreferrer" class="link">Verify credential <span aria-hidden="true">&#8599;</span></a>
+          </article>
+          <article class="panel cert reveal">
+            <span class="cert-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 21.5l-2.6-1.9-3.2.1-1-3L2.6 14.8l1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path class="tick" d="M8.5 12.2l2.3 2.3 4.7-4.8"/></svg>
+            </span>
+            <h4 class="cert-title">AWS Certified Cloud Practitioner</h4>
+          </article>
+          <article class="panel cert reveal">
+            <span class="cert-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2.5l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 21.5l-2.6-1.9-3.2.1-1-3L2.6 14.8l1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path class="tick" d="M8.5 12.2l2.3 2.3 4.7-4.8"/></svg>
+            </span>
+            <h4 class="cert-title">Java Certification</h4>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact" data-shot="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="idx">06</span> Contact</p>
+          <h2 class="section-title">Contact</h2>
+        </div>
+        <div class="panel contact-panel reveal">
+          <a href="mailto:salmanmohammed703@gmail.com" class="contact-email">salmanmohammed703@gmail.com</a>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/mohammed--salman/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
+            <a href="https://github.com/Mohammed-Salman-Shaikh" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+            <a href="https://mohammed-salman.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Mohammed Salman Shaikh &middot; Java Backend Developer</p>
+      <a href="#top" class="link">Back to top <span aria-hidden="true">&#8593;</span></a>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+    var root = document.documentElement;
+    var body = document.body;
+    var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var darkMQ = window.matchMedia('(prefers-color-scheme: dark)');
+    var store = {
+      get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+      set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    };
+
+    /* ---------- Theme ---------- */
+    var themeBtn = document.getElementById('theme-toggle');
+    function isDark() {
+      var t = root.getAttribute('data-theme');
+      return t ? t === 'dark' : darkMQ.matches;
+    }
+    themeBtn.addEventListener('click', function () {
+      var next = isDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      store.set('theme', next);
+      readColors();
+    });
+    darkMQ.addEventListener && darkMQ.addEventListener('change', function () { readColors(); });
+
+    /* ---------- Motion preference ---------- */
+    var motionBtn = document.getElementById('motion-toggle');
+    var saved = store.get('motion');
+    var motionOn = saved ? saved === 'on' : !reduceMQ.matches;
+    function applyMotion() {
+      root.classList.toggle('motion-off', !motionOn);
+      motionBtn.setAttribute('aria-pressed', String(!motionOn));
+      motionBtn.setAttribute('aria-label', motionOn ? 'Pause motion' : 'Play motion');
+      dirty = true;
+    }
+    motionBtn.addEventListener('click', function () {
+      motionOn = !motionOn;
+      store.set('motion', motionOn ? 'on' : 'off');
+      applyMotion();
+    });
+
+    /* ---------- Kinetic hero name ---------- */
+    var nameEl = document.querySelector('.hero-name');
+    (function splitName() {
+      var text = nameEl.textContent.trim();
+      var n = 0;
+      nameEl.setAttribute('aria-label', text);
+      nameEl.innerHTML = text.split(' ').map(function (w) {
+        return '<span class="word" aria-hidden="true">' + w.split('').map(function (c) {
+          return '<span class="ch" style="--i:' + (n++) + '">' + c + '</span>';
+        }).join('') + '</span>';
+      }).join(' ');
+    })();
+
+    /* ---------- Typewriter of roles (all from resume.md) ---------- */
+    (function typer() {
+      var el = document.getElementById('typer');
+      var roles = el.getAttribute('data-roles').split('|');
+      var r = 0, c = roles[0].length, del = true, wait = 1800;
+      function tick() {
+        if (!motionOn) { el.textContent = roles[0]; setTimeout(tick, 600); return; }
+        var word = roles[r];
+        if (wait > 0) { wait -= 60; setTimeout(tick, 60); return; }
+        if (del) {
+          c--; if (c <= 0) { del = false; r = (r + 1) % roles.length; word = roles[r]; c = 0; }
+        } else {
+          c++; if (c >= word.length) { del = true; wait = 1900; }
+        }
+        el.textContent = roles[r].slice(0, c);
+        setTimeout(tick, del ? 28 : 55);
+      }
+      setTimeout(tick, 1400);
+    })();
+
+    /* ---------- Scroll progress + reveal + active section ---------- */
+    var bar = document.getElementById('progress-bar');
+    function onScroll() {
+      var max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0) + ')';
+      body.classList.toggle('scrolled', scrollY > 24);
+    }
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    var revealIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function (el, i) {
+      el.style.setProperty('--d', (i % 4) * 70 + 'ms');
+      revealIO.observe(el);
+    });
+
+    var navLinks = document.querySelectorAll('[data-nav]');
+    var shotIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var shot = e.target.getAttribute('data-shot');
+        setShot(shot);
+        navLinks.forEach(function (a) {
+          var on = a.getAttribute('data-nav') === shot;
+          a.classList.toggle('active', on);
+          if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('[data-shot]').forEach(function (el) { if (el !== body) shotIO.observe(el); });
+
+    /* Spotlight that follows the pointer on panels */
+    document.querySelectorAll('.panel, .skill-group').forEach(function (el) {
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    /* =====================================================
+       3D SCENE — hand-written projection on a 2D canvas.
+       Nodes are generated from the Skills section, so the
+       graph always matches what the page says.
+       ===================================================== */
+    var canvas = document.getElementById('scene');
+    var ctx = canvas.getContext('2d');
+    var W = 0, H = 0, DPR = 1, focal = 600, small = false;
+    var dirty = true;
+    var C = {};
+
+    function readColors() {
+      var cs = getComputedStyle(root);
+      ['--scene-a', '--scene-b', '--scene-ink', '--scene-grid'].forEach(function (k) {
+        C[k.slice(8)] = cs.getPropertyValue(k).trim();
+      });
+      C.dark = isDark();
+      dirty = true;
+    }
+    function rgba(hex, a) {
+      var h = hex.replace('#', '');
+      if (h.length === 3) h = h.split('').map(function (c) { return c + c; }).join('');
+      var n = parseInt(h, 16);
+      return 'rgba(' + (n >> 16 & 255) + ',' + (n >> 8 & 255) + ',' + (n & 255) + ',' + a.toFixed(3) + ')';
+    }
+
+    function resize() {
+      DPR = Math.min(window.devicePixelRatio || 1, 2);
+      W = innerWidth; H = innerHeight;
+      canvas.width = Math.round(W * DPR); canvas.height = Math.round(H * DPR);
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      small = W < 760;
+      focal = Math.min(W * 1.15, H * 1.25) * 0.78;
+      dirty = true;
+    }
+    addEventListener('resize', resize);
+
+    /* --- Build the graph from the DOM --- */
+    var groupEls = Array.prototype.slice.call(document.querySelectorAll('.skill-group'));
+    var groups = groupEls.map(function (el, i) {
+      return {
+        el: el,
+        name: el.querySelector('.skill-heading').textContent.trim(),
+        items: Array.prototype.map.call(el.querySelectorAll('li'), function (li) { return li.textContent.trim(); })
+      };
+    });
+    var G = groups.length;
+    var nodes = [], edges = [], packets = [], dust = [], rings = [];
+    var core = { bx: 0, by: 0, bz: 0, r: 16, kind: 'core', label: 'MS', g: -1, ph: 0 };
+    nodes.push(core);
+    var leafCount = 0;
+    groups.forEach(function (g, i) {
+      var a = (i / G) * Math.PI * 2;
+      var R = 270;
+      var hub = { bx: Math.cos(a) * R, by: Math.sin(i * 2.1) * 70, bz: Math.sin(a) * R, r: 6, kind: 'hub', label: g.name, g: i, ph: i };
+      g.hub = hub; g.angle = a;
+      nodes.push(hub);
+      edges.push({ a: core, b: hub, kind: 'trunk', g: i });
+      var n = g.items.length, rad = 46 + n * 5;
+      g.items.forEach(function (label, j) {
+        var k = (j + 0.5) / n, phi = Math.acos(1 - 2 * k), th = Math.PI * (1 + Math.sqrt(5)) * j;
+        var leaf = {
+          bx: hub.bx + Math.cos(th) * Math.sin(phi) * rad + Math.cos(a) * 30,
+          by: hub.by + Math.cos(phi) * rad * 0.85,
+          bz: hub.bz + Math.sin(th) * Math.sin(phi) * rad + Math.sin(a) * 30,
+          r: 3, kind: 'leaf', label: label, g: i, ph: Math.random() * 6.28
+        };
+        nodes.push(leaf); leafCount++;
+        edges.push({ a: hub, b: leaf, kind: 'branch', g: i });
+      });
+    });
+    for (var i = 0; i < G; i++) edges.push({ a: groups[i].hub, b: groups[(i + 1) % G].hub, kind: 'ring', g: -1 });
+    nodes.forEach(function (n) { n.x = n.bx; n.y = n.by; n.z = n.bz; });
+
+    for (i = 0; i < 260; i++) {
+      var u = Math.random() * 2 - 1, t = Math.random() * 6.283, rr = 500 + Math.random() * 700, s = Math.sqrt(1 - u * u);
+      dust.push({ x: Math.cos(t) * s * rr, y: u * rr * 0.6, z: Math.sin(t) * s * rr, tw: Math.random() * 6.28 });
+    }
+    [[120, 0.35, 0], [165, -0.5, 1.1], [205, 0.15, 2.2]].forEach(function (cfg) {
+      var pts = [];
+      for (var k = 0; k <= 72; k++) {
+        var q = (k / 72) * Math.PI * 2;
+        var x = Math.cos(q) * cfg[0], z = Math.sin(q) * cfg[0];
+        pts.push({ x: x, y: z * Math.sin(cfg[1]), z: z * Math.cos(cfg[1]) });
+      }
+      rings.push({ pts: pts, spin: cfg[2] });
+    });
+
+    var hud = document.getElementById('hud-text');
+    var hudDefault = 'skill graph · ' + G + ' groups · ' + leafCount + ' skills';
+    hud.textContent = hudDefault;
+
+    function spawnPacket(forceGroup) {
+      var pool = edges.filter(function (e) {
+        return e.kind !== 'ring' && (forceGroup == null || e.g === forceGroup);
+      });
+      var e = pool[(Math.random() * pool.length) | 0];
+      if (!e) return;
+      packets.push({ e: e, t: 0, v: 0.25 + Math.random() * 0.45, back: Math.random() < 0.4, trail: [] });
+    }
+
+    /* --- Camera with per-section "shots" --- */
+    var SHOTS = {
+      hero:       { pitch: 0.30, dist: 860,  cx: 0.70, yawSpeed: 1 },
+      about:      { pitch: 0.55, dist: 700,  cx: 0.78, yawSpeed: 0.6 },
+      experience: { pitch: 0.12, dist: 600,  cx: 0.85, yawSpeed: 0.5 },
+      projects:   { pitch: -0.12, dist: 760, cx: 0.80, yawSpeed: 0.7 },
+      skills:     { pitch: 0.38, dist: 820,  cx: 0.78, yawSpeed: 0.8 },
+      education:  { pitch: 0.75, dist: 980,  cx: 0.75, yawSpeed: 0.5 },
+      contact:    { pitch: 0.22, dist: 520,  cx: 0.50, yawSpeed: 1.2 }
+    };
+    var cam = { yaw: -0.6, pitch: 0.3, dist: 1400, cx: 0.7, cy: 0.5, fx: 0, fy: 0, fz: 0 };
+    var shot = SHOTS.hero, shotName = 'hero';
+    var activeGroup = -1, groupMix = 0;
+    var yawAuto = -0.6, mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+
+    function setShot(name) {
+      if (!SHOTS[name] || name === shotName) return;
+      shotName = name; shot = SHOTS[name];
+      body.setAttribute('data-shot', name);
+      if (name !== 'skills' && activeGroup !== -1 && !groupLocked) setGroup(-1);
+      dirty = true;
+    }
+
+    var groupLocked = false;
+    function setGroup(i, lock) {
+      activeGroup = i;
+      groupLocked = !!lock && i !== -1;
+      groupEls.forEach(function (el, k) {
+        el.classList.toggle('is-active', k === i);
+        el.setAttribute('aria-pressed', String(k === i));
+      });
+      if (i === -1) hud.textContent = hudDefault;
+      else hud.textContent = 'focus → ' + groups[i].name.toLowerCase();
+      var vl = document.getElementById('viewport-label');
+      if (vl) vl.textContent = i === -1 ? 'live graph · pick a group' : 'focus → ' + groups[i].name.toLowerCase() + ' · ' + groups[i].items.length;
+      if (i !== -1) for (var k = 0; k < 4; k++) spawnPacket(i);
+      dirty = true;
+    }
+    groupEls.forEach(function (el, i) {
+      el.setAttribute('role', 'button');
+      el.setAttribute('aria-pressed', 'false');
+      el.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse' && !groupLocked) setGroup(i); });
+      el.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse' && !groupLocked) setGroup(-1); });
+      el.addEventListener('focus', function () { if (!groupLocked) setGroup(i); });
+      el.addEventListener('blur', function () { if (!groupLocked) setGroup(-1); });
+      el.addEventListener('click', function () {
+        if (groupLocked && activeGroup === i) setGroup(-1); else setGroup(i, true);
+      });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+        if (e.key === 'Escape') { setGroup(-1); }
+      });
+    });
+
+    addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse') return;
+      mouse.tx = (e.clientX / W) * 2 - 1;
+      mouse.ty = (e.clientY / H) * 2 - 1;
+    }, { passive: true });
+
+    /* --- Projection --- */
+    var cyw, syw, cpt, spt;
+    function project(x, y, z) {
+      x -= cam.fx; y -= cam.fy; z -= cam.fz;
+      var x1 = x * cyw - z * syw;
+      var z1 = x * syw + z * cyw;
+      var y1 = y * cpt - z1 * spt;
+      var z2 = y * spt + z1 * cpt + cam.dist;
+      if (z2 < 30) return null;
+      var s = focal / z2;
+      return { x: W * cam.cx + x1 * s, y: H * cam.cy + y1 * s, s: s, z: z2 };
+    }
+    function fog(z) {
+      var near = cam.dist - 380, far = cam.dist + 520;
+      var f = 1 - (z - near) / (far - near);
+      return f < 0.08 ? 0.08 : f > 1 ? 1 : f;
+    }
+    function lerp(a, b, t) { return a + (b - a) * t; }
+    function angLerp(a, b, t) {
+      var d = ((b - a + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
+      return a + d * t;
+    }
+
+    /* --- Render loop --- */
+    var last = performance.now(), time = 0;
+    function frame(now) {
+      var dt = Math.min((now - last) / 1000, 0.05);
+      last = now;
+      requestAnimationFrame(frame);
+      if (!motionOn && !dirty) return;
+
+      var k = motionOn ? 1 - Math.pow(0.0018, dt) : 1; // smoothing factor
+      if (motionOn) {
+        time += dt;
+        if (activeGroup === -1) yawAuto += dt * 0.085 * shot.yawSpeed;
+        mouse.x = lerp(mouse.x, mouse.tx, k); mouse.y = lerp(mouse.y, mouse.ty, k);
+      }
+      groupMix = lerp(groupMix, activeGroup === -1 ? 0 : 1, k);
+
+      // camera targets
+      var tYaw = yawAuto, tf = { x: 0, y: 0, z: 0 }, tDist = shot.dist, tCx = small ? 0.5 : shot.cx;
+      if (activeGroup !== -1) {
+        var g = groups[activeGroup];
+        tYaw = -Math.PI / 2 - g.angle;
+        tf = { x: g.hub.bx * 0.92, y: g.hub.by * 0.92, z: g.hub.bz * 0.92 };
+        tDist = shot.dist * 0.62;
+        yawAuto = angLerp(yawAuto, tYaw, k);
+      }
+      if (small) tDist *= 1.08;
+      cam.yaw = angLerp(cam.yaw, tYaw + mouse.x * 0.22, k);
+      cam.pitch = lerp(cam.pitch, shot.pitch + mouse.y * 0.1, k);
+      cam.dist = lerp(cam.dist, tDist, k);
+      cam.cx = lerp(cam.cx, tCx, k);
+      cam.cy = lerp(cam.cy, small && shotName === 'hero' ? 0.74 : 0.5, k);
+      cam.fx = lerp(cam.fx, tf.x, k); cam.fy = lerp(cam.fy, tf.y, k); cam.fz = lerp(cam.fz, tf.z, k);
+      cyw = Math.cos(cam.yaw); syw = Math.sin(cam.yaw); cpt = Math.cos(cam.pitch); spt = Math.sin(cam.pitch);
+
+      // gentle drift of leaves
+      if (motionOn) nodes.forEach(function (n) {
+        if (n.kind === 'leaf') {
+          n.x = n.bx + Math.sin(time * 0.7 + n.ph) * 5;
+          n.y = n.by + Math.cos(time * 0.9 + n.ph) * 5;
+          n.z = n.bz + Math.sin(time * 0.6 + n.ph * 1.3) * 5;
+        } else if (n.kind === 'hub') {
+          n.y = n.by + Math.sin(time * 0.5 + n.ph) * 6;
+        }
+      });
+
+      draw(dt);
+      dirty = false;
+    }
+
+    function groupAlpha(g) {
+      if (g < 0 || activeGroup === -1) return 1;
+      return g === activeGroup ? 1 : 1 - groupMix * 0.78;
+    }
+
+    function draw(dt) {
+      ctx.clearRect(0, 0, W, H);
+      var dark = C.dark;
+      var A = C.a, B = C.b, INK = C.ink, GRID = C.grid;
+
+      // ground grid
+      ctx.lineWidth = 1;
+      var gy = 260, ext = 1100, step = 110, seg = 12;
+      for (var line = -ext; line <= ext; line += step) {
+        for (var dir = 0; dir < 2; dir++) {
+          var prev = null;
+          for (var sI = 0; sI <= seg; sI++) {
+            var p = -ext + (2 * ext * sI) / seg;
+            var P = dir ? project(line, gy, p) : project(p, gy, line);
+            if (P && prev) {
+              var f = fog(P.z) * (1 - Math.min(1, Math.hypot(line, p) / ext));
+              ctx.strokeStyle = rgba(GRID, 0.22 * f);
+              ctx.beginPath(); ctx.moveTo(prev.x, prev.y); ctx.lineTo(P.x, P.y); ctx.stroke();
+            }
+            prev = P;
+          }
+        }
+      }
+
+      // dust
+      for (var d = 0; d < dust.length; d++) {
+        var q = dust[d], DP = project(q.x, q.y, q.z);
+        if (!DP) continue;
+        var tw = 0.5 + 0.5 * Math.sin(time * 1.5 + q.tw);
+        ctx.fillStyle = rgba(INK, (dark ? 0.35 : 0.25) * fog(DP.z) * (0.4 + tw * 0.6));
+        var ds = Math.min(2.2, Math.max(0.6, DP.s * 1.6));
+        ctx.fillRect(DP.x, DP.y, ds, ds);
+      }
+
+      ctx.globalCompositeOperation = dark ? 'lighter' : 'source-over';
+
+      // orbit rings around the core
+      rings.forEach(function (ring, ri) {
+        var rot = time * (0.12 + ri * 0.05) + ring.spin, cr = Math.cos(rot), sr = Math.sin(rot);
+        ctx.beginPath();
+        var started = false;
+        ring.pts.forEach(function (pt) {
+          var x = pt.x * cr - pt.z * sr, z = pt.x * sr + pt.z * cr;
+          var RP = project(x, pt.y, z);
+          if (!RP) { started = false; return; }
+          if (!started) { ctx.moveTo(RP.x, RP.y); started = true; } else ctx.lineTo(RP.x, RP.y);
+        });
+        ctx.strokeStyle = rgba(ri === 1 ? B : A, (dark ? 0.28 : 0.35) * (1 - groupMix * 0.6));
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      });
+
+      // project nodes
+      nodes.forEach(function (n) { n.P = project(n.x, n.y, n.z); });
+
+      // edges
+      edges.forEach(function (e) {
+        var a = e.a.P, b = e.b.P;
+        if (!a || !b) return;
+        var f = (fog(a.z) + fog(b.z)) / 2 * groupAlpha(e.g);
+        var col = e.kind === 'ring' ? B : A;
+        var base = e.kind === 'trunk' ? 0.45 : e.kind === 'ring' ? 0.18 : 0.3;
+        if (e.g === activeGroup && activeGroup !== -1) base += 0.35 * groupMix;
+        ctx.strokeStyle = rgba(col, base * f);
+        ctx.lineWidth = e.kind === 'trunk' ? 1.4 : 1;
+        if (e.kind === 'ring') ctx.setLineDash([3, 6]); else ctx.setLineDash([]);
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      });
+      ctx.setLineDash([]);
+
+      // packets (requests travel out in amber, responses return in teal)
+      if (motionOn) {
+        var want = small ? 16 : 30;
+        while (packets.length < want) spawnPacket(activeGroup !== -1 && Math.random() < 0.6 ? activeGroup : null);
+      }
+      for (var pi = packets.length - 1; pi >= 0; pi--) {
+        var pk = packets[pi];
+        if (motionOn) pk.t += dt * pk.v * (pk.e.kind === 'trunk' ? 0.8 : 1.4);
+        if (pk.t >= 1) { packets.splice(pi, 1); continue; }
+        var tt = pk.back ? 1 - pk.t : pk.t;
+        var e0 = pk.e.a, e1 = pk.e.b;
+        var PP = project(lerp(e0.x, e1.x, tt), lerp(e0.y, e1.y, tt), lerp(e0.z, e1.z, tt));
+        if (!PP) continue;
+        pk.trail.push({ x: PP.x, y: PP.y });
+        if (pk.trail.length > 10) pk.trail.shift();
+        var ga = groupAlpha(pk.e.g) * fog(PP.z);
+        var pc = pk.back ? B : A;
+        if (pk.trail.length > 1) {
+          ctx.beginPath(); ctx.moveTo(pk.trail[0].x, pk.trail[0].y);
+          for (var ti = 1; ti < pk.trail.length; ti++) ctx.lineTo(pk.trail[ti].x, pk.trail[ti].y);
+          ctx.strokeStyle = rgba(pc, 0.5 * ga); ctx.lineWidth = Math.max(1, PP.s * 2.2); ctx.stroke();
+        }
+        var pr = Math.max(1.2, PP.s * 2.6);
+        ctx.fillStyle = rgba(pc, 0.95 * ga);
+        ctx.beginPath(); ctx.arc(PP.x, PP.y, pr, 0, 6.283); ctx.fill();
+        if (dark) { ctx.fillStyle = rgba(pc, 0.18 * ga); ctx.beginPath(); ctx.arc(PP.x, PP.y, pr * 3.5, 0, 6.283); ctx.fill(); }
+      }
+
+      // nodes, back to front
+      var vis = nodes.filter(function (n) { return n.P; }).sort(function (a, b) { return b.P.z - a.P.z; });
+      vis.forEach(function (n) {
+        var P = n.P, f = fog(P.z) * groupAlpha(n.g);
+        var isActive = n.g === activeGroup && activeGroup !== -1;
+        var r = Math.max(1.5, n.r * P.s * (isActive ? 1 + 0.35 * groupMix : 1));
+        var col = n.kind === 'leaf' ? B : A;
+        if (n.kind === 'core') {
+          var pulse = 1 + Math.sin(time * 2) * 0.08;
+          var grd = ctx.createRadialGradient(P.x, P.y, 0, P.x, P.y, r * 6 * pulse);
+          grd.addColorStop(0, rgba(A, dark ? 0.55 : 0.35)); grd.addColorStop(1, rgba(A, 0));
+          ctx.fillStyle = grd; ctx.beginPath(); ctx.arc(P.x, P.y, r * 6 * pulse, 0, 6.283); ctx.fill();
+        } else if (dark || isActive) {
+          ctx.fillStyle = rgba(col, (dark ? 0.16 : 0.12) * f);
+          ctx.beginPath(); ctx.arc(P.x, P.y, r * 3.2, 0, 6.283); ctx.fill();
+        }
+        ctx.fillStyle = rgba(col, f);
+        ctx.beginPath(); ctx.arc(P.x, P.y, r, 0, 6.283); ctx.fill();
+        if (n.kind !== 'leaf') {
+          ctx.strokeStyle = rgba(col, 0.6 * f); ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.arc(P.x, P.y, r + 4 + (n.kind === 'core' ? Math.sin(time * 2) * 2 : 0), 0, 6.283); ctx.stroke();
+        }
+      });
+
+      // labels
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.textBaseline = 'middle';
+      vis.forEach(function (n) {
+        var P = n.P, f = fog(P.z) * groupAlpha(n.g);
+        var isActive = n.g === activeGroup && activeGroup !== -1;
+        var show;
+        if (n.kind === 'core') {
+          ctx.font = '700 ' + Math.max(9, Math.round(14 * P.s)) + 'px ui-monospace, "Cascadia Code", Consolas, monospace';
+          ctx.textAlign = 'center';
+          ctx.fillStyle = C.dark ? '#0b0d12' : '#ffffff';
+          ctx.fillText('MS', P.x, P.y + 0.5);
+          return;
+        }
+        if (n.kind === 'hub') show = !small || isActive || shotName === 'skills';
+        else show = isActive ? groupMix > 0.4 : (!small && shotName === 'skills' && f > 0.75);
+        if (!show || f < 0.2) return;
+        var big = n.kind === 'hub';
+        var fs = big ? 11 : 11;
+        ctx.font = (big ? '700 ' : '500 ') + fs + 'px ui-monospace, "Cascadia Code", Consolas, monospace';
+        var txt = big ? n.label.toUpperCase() : n.label;
+        ctx.textAlign = 'left';
+        var x = P.x + n.r * P.s + 8, y = P.y;
+        var alpha = big ? 0.9 * f : (isActive ? groupMix : 0.6 * f);
+        if (big || isActive) {
+          var w = ctx.measureText(txt).width;
+          ctx.fillStyle = C.dark ? 'rgba(7,9,15,' + (0.7 * alpha).toFixed(3) + ')' : 'rgba(255,253,248,' + (0.85 * alpha).toFixed(3) + ')';
+          ctx.fillRect(x - 4, y - 9, w + 8, 18);
+        }
+        ctx.fillStyle = rgba(big ? A : INK, alpha);
+        ctx.fillText(txt, x, y);
+      });
+    }
+
+    readColors();
+    resize();
+    applyMotion();
+    requestAnimationFrame(frame);
+    reduceMQ.addEventListener && reduceMQ.addEventListener('change', function (e) {
+      if (!store.get('motion')) { motionOn = !e.matches; applyMotion(); }
+    });
+  })();
+  </script>
+</body>
+</html>
