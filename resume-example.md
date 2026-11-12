@@ -19,7 +19,7 @@ I build and fix backend systems for payments. I like making slow things fast
 and turning manual work into a job that runs on its own.
 
 ## Experience
-### Software Engineer — IT services company (banking client) — Apr 2024 to Present
+### Software Engineer, IT services company (banking client), Apr 2024 to Present
 - Payment status API: rewrote slow queries and added caching; p95 latency went from 1.8s to 400ms
 - Reconciliation batch job: built a nightly Spring Batch job that removed about 3 hours of manual work per day
 - On-call: handled about 40 production tickets and wrote the team's runbook
@@ -34,4 +34,4 @@ and turning manual work into a job that runs on its own.
 - Learning: system design
 
 ## Education
-- B.Tech, Computer Science — Example Institute of Technology — 2024
+- B.Tech, Computer Science, Example Institute of Technology, 2024

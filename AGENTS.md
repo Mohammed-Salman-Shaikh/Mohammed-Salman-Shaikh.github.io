@@ -18,6 +18,8 @@ so index.html must stay in the root of this folder.
 - If resume.md has no facts for a section, leave that section out.
   No placeholder text ("Lorem ipsum", "Coming soon", "Add your project here").
 - Keep my numbers and results exactly as written in resume.md.
+- Never use the em dash character in any text (page, README, resume.md).
+  Use a comma, colon or full stop instead.
 - Never put a phone number, home address, date of birth or any ID number
   on the page, even if one is in resume.md.
 - Email, LinkedIn and GitHub links only if they are in resume.md.
