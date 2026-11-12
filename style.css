@@ -1,5 +1,5 @@
 /* =========================================================
-   Mohammed Salman Shaikh — Portfolio
+   Mohammed Salman Shaikh: Portfolio
    Plain CSS · system fonts · light + dark · mobile first
    ========================================================= */
 
@@ -368,7 +368,7 @@ body.scrolled .topnav {
 .section-hint { margin-top: 12px; color: var(--muted); font-size: .95rem; }
 .no-js .js-only { display: none; }
 
-/* Panels — glass cards over the 3D scene */
+/* Panels: glass cards over the 3D scene */
 .panel {
   position: relative;
   padding: clamp(1.25rem, 3.5vw, 2rem);
