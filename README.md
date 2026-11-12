@@ -1,49 +1,67 @@
-# Portfolio Starter (AI-Powered Engineer Accelerator · Session 2)
+# Mohammed Salman Shaikh · Java Backend Developer
 
-Build your personal portfolio website from your resume with a coding agent,
-then put it live on the internet for free with GitHub Pages.
-Live in class: about 12 minutes. Finish at home if you need more time.
+**Live portfolio: [mohammed-salman-shaikh.github.io](https://Mohammed-Salman-Shaikh.github.io/)**
 
-## What is in this folder
-- AGENTS.md: the rules the agent must follow (only facts from your resume, no libraries)
-- resume.md: fill this with YOUR resume text (instructions inside)
-- resume-example.md: a filled example (fictional student). Do not copy it.
-- prompts.md: the 5 prompts, copy-paste
+Java Backend Developer with 2+ years of experience at Capgemini, Bangalore, building
+server-side applications with Core Java, Spring Boot, Hibernate/JPA and RESTful APIs.
+Adobe Certified AEM Professional and AWS Certified Cloud Practitioner.
 
-## Steps
+[LinkedIn](https://www.linkedin.com/in/mohammed--salman/) ·
+[GitHub](https://github.com/Mohammed-Salman-Shaikh) ·
+[Email](mailto:salmanmohammed703@gmail.com) ·
+[Adobe AEM credential](https://certification.adobe.com/credential/verify/1ea7d9d0-df6f-11ef-9883-42010a40002a)
 
-1. Unzip this folder into your cohort folder and rename it to `portfolio`.
-2. Fill `resume.md` (5 min). Remove phone number, address, date of birth and ID numbers.
-   This page will be public.
-3. Antigravity: folder+ icon → New Project → Add Folder → `portfolio` → Create.
-   Settings → Agent → Request review must be ON.
-4. Prompt P1 (plan). Read the plan. Approve it.
-5. Open `index.html` in your browser (double-click it). Check it on a small window too.
-6. Prompt P2 (fact check), new conversation. Fix anything marked NOT FOUND.
-7. Prompt P3 (rule test). The agent should refuse to invent. Screenshot it.
-8. Put it live (pick one):
+---
 
-### Option A: upload in the browser (easiest, no git needed)
-1. github.com → New repository → name: `portfolio` → Public → Create repository.
-2. Click "uploading an existing file". Drag in `index.html` and `style.css`
-   (and any image you used). Do NOT upload resume-example.md.
-   Commit changes.
-3. Settings → Pages → Build and deployment → Source: "Deploy from a branch"
-   → Branch: `main`, folder: `/ (root)` → Save.
-4. Wait 1–2 minutes and refresh the Pages screen. Your site is at
-   `https://YOUR-USERNAME.github.io/portfolio/`
+## What I work with
 
-### Option B: let the agent push (if git + GitHub CLI are set up)
-Prompt P5. Read every command before you approve it. Then do step 3 of Option A.
+| Area | Skills |
+| --- | --- |
+| Languages | Java, SQL, JavaScript, Groovy |
+| Core Java | OOP, Collections, Exception Handling |
+| Backend & Frameworks | Spring Boot, Spring MVC, Hibernate, JPA, RESTful API Design, Microservices, Node.js |
+| Adobe Experience Manager | AEM 6.5, OSGi, Sling Servlets, JCR |
+| Databases | MySQL, MongoDB |
+| Cloud & CI/CD | Microsoft Azure, AWS, Jenkins, CI/CD Pipelines |
+| Build & Version Control | Maven, Git, GitHub |
+| Testing | JUnit, Unit Testing |
+| Frontend | React.js, HTML, CSS |
 
-## Your check before you share the link
-- [ ] Every line on the page is true and is in resume.md
-- [ ] No phone number, address, date of birth or ID on the page
-- [ ] Looks right on your phone
-- [ ] No placeholder text left ("Lorem ipsum", "[ ]")
-- [ ] Links (email, LinkedIn, GitHub) open the right page
+## Highlights
 
-Homework label: **S2 – Portfolio**: your live link + the rule-test screenshot.
+- **Software Engineer, Capgemini** (June 2024 to Present): backend services in Java and
+  Spring Boot for Atlas Copco's global career portal, RESTful APIs with Sling servlets and
+  OSGi services, an automated job-expiry feature, and an event-driven asset-publish
+  notification system, deployed on Microsoft Azure with Maven/Jenkins CI/CD.
+- **ChatIQ, AI chat application** (Nov 2023): full-stack MERN chatbot using the OpenAI API,
+  with JWT authentication and persistent chat history.
 
-Tip: want a shorter link (`https://YOUR-USERNAME.github.io/`)? Name the repo exactly
-`YOUR-USERNAME.github.io` instead of `portfolio`.
+## About this site
+
+A single static page, hand-written in plain HTML, CSS and a little JavaScript.
+No framework, no build step and no external libraries. It is hosted on GitHub Pages.
+
+- **3D skill graph:** a canvas graph built live from the Skills section. Hover, focus or tap
+  a skill group to highlight it.
+- **Light and dark themes:** follows your system setting, with a toggle in the top bar.
+- **Accessible motion:** a pause button for the animation, plus a skip link and keyboard
+  focus on every skill group.
+- **Mobile first:** works from a 360px phone up to a wide laptop screen.
+
+### Files
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | The page itself |
+| `style.css` | All styles, including both themes |
+| `resume.md` | The single source of facts the page is built from |
+| `AGENTS.md` | Rules for AI coding agents that edit this repo (never invent facts) |
+
+### Run it locally
+
+Clone the repo and open `index.html` in your browser. Nothing to install.
+
+### Always improving
+
+The site gets one small improvement every day, each as its own pull request:
+design, features, accessibility, wording or performance.
