@@ -17,15 +17,15 @@ Adobe Certified AEM Professional and AWS Certified Cloud Practitioner.
 
 | Area | Skills |
 | --- | --- |
-| Languages | Java, SQL, JavaScript, Groovy |
-| Core Java | OOP, Collections, Exception Handling |
+| Languages | Java, JavaScript, Groovy |
 | Backend & Frameworks | Spring Boot, Spring MVC, Hibernate, JPA, RESTful API Design, Microservices, Node.js |
 | Adobe Experience Manager | AEM 6.5, OSGi, Sling Servlets, JCR |
-| Databases | MySQL, MongoDB |
+| Databases | SQL, MySQL, MongoDB |
 | Cloud & CI/CD | Microsoft Azure, AWS, Jenkins, CI/CD Pipelines |
 | Build & Version Control | Maven, Git, GitHub |
 | Testing | JUnit, Unit Testing |
 | Frontend | React.js, HTML, CSS |
+| Java & CS Fundamentals | Object-Oriented Design (OOP), Collections, Exception Handling, Data Structures, Algorithms |
 
 ## Highlights
 
