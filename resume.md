@@ -10,7 +10,7 @@ Java Backend Developer, 2+ years, Java + Spring Boot, Capgemini, Bangalore
 - Email: salmanmohammed703@gmail.com
 - LinkedIn: https://www.linkedin.com/in/mohammed--salman/
 - GitHub: https://github.com/Mohammed-Salman-Shaikh
-- Portfolio: https://mohammed-salman.vercel.app/
+- Portfolio: https://Mohammed-Salman-Shaikh.github.io/
 
 ## About
 Java Backend Developer with 2+ years of experience building server-side applications with Core Java (OOP), Spring Boot, Hibernate/JPA and RESTful APIs, working with MySQL and MongoDB. Experienced in JUnit testing, Git, Maven, and Jenkins CI/CD with Microsoft Azure deployments, working with cross-functional teams for a multinational client. Adobe Certified AEM Professional.
