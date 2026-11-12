@@ -34,16 +34,15 @@ Java Backend Developer with 2+ years of experience building server-side applicat
 - Responsive Material-UI interface that renders code blocks.
 
 ## Skills
-- Languages: Java, SQL, JavaScript, Groovy
-- Core Java: OOP, Collections, Exception Handling
+- Languages: Java, JavaScript, Groovy
 - Backend & Frameworks: Spring Boot, Spring MVC, Hibernate, JPA, RESTful API Design, Microservices, Node.js
 - Adobe Experience Manager: AEM 6.5, OSGi, Sling Servlets, JCR
-- Databases: MySQL, MongoDB
+- Databases: SQL, MySQL, MongoDB
 - Cloud & CI/CD: Microsoft Azure, AWS, Jenkins, CI/CD Pipelines
 - Build & Version Control: Maven, Git, GitHub
 - Testing: JUnit, Unit Testing
 - Frontend: React.js, HTML, CSS
-- CS Fundamentals: Data Structures, Algorithms, Object-Oriented Design
+- Java & CS Fundamentals: Object-Oriented Design (OOP), Collections, Exception Handling, Data Structures, Algorithms
 
 ## Education
 - Bachelor of Technology, Computer Engineering, Presidency University, Bangalore, Aug 2019 to June 2023
