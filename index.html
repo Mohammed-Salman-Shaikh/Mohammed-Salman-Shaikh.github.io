@@ -260,9 +260,15 @@
         <div class="panel contact-panel reveal">
           <a href="mailto:salmanmohammed703@gmail.com" class="contact-email">salmanmohammed703@gmail.com</a>
           <div class="contact-links">
+            <button type="button" id="copy-email" class="btn btn-copy js-only" data-email="salmanmohammed703@gmail.com">
+              <svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+              <svg class="i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+              <span class="copy-label">Copy email</span>
+            </button>
             <a href="https://www.linkedin.com/in/mohammed--salman/" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>
             <a href="https://github.com/Mohammed-Salman-Shaikh" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
           </div>
+          <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>
@@ -286,6 +292,43 @@
       get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
       set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
     };
+
+    /* ---------- Copy email ---------- */
+    var copyBtn = document.getElementById('copy-email');
+    var copyStatus = document.getElementById('copy-status');
+    var copyTimer;
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+      return new Promise(function (resolve, reject) {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.setAttribute('readonly', '');
+        ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        if (ok) resolve(); else reject();
+      });
+    }
+    function showCopy(msg, done) {
+      copyBtn.classList.toggle('is-copied', done);
+      copyBtn.querySelector('.copy-label').textContent = done ? 'Copied' : 'Copy email';
+      copyStatus.textContent = msg;
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(function () {
+        copyBtn.classList.remove('is-copied');
+        copyBtn.querySelector('.copy-label').textContent = 'Copy email';
+        copyStatus.textContent = '';
+      }, 2200);
+    }
+    copyBtn.addEventListener('click', function () {
+      var email = copyBtn.getAttribute('data-email');
+      copyText(email).then(function () {
+        showCopy('Email address copied to clipboard.', true);
+      }, function () {
+        showCopy('Could not copy. The address is ' + email + '.', false);
+      });
+    });
 
     /* ---------- Theme ---------- */
     var themeBtn = document.getElementById('theme-toggle');
