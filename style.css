@@ -532,3 +532,65 @@ body.scrolled .topnav {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* ---------- Print / Save as PDF ----------
+   A clean, one-column, ink-friendly copy for recruiters who print
+   the page or save it as a PDF. Always light, no motion, no canvas. */
+@media print {
+  @page { margin: 14mm 14mm 16mm; }
+  :root, :root[data-theme="dark"] {
+    --bg: #ffffff; --surface: #ffffff; --surface-strong: #ffffff;
+    --ink: #111111; --muted: #444444;
+    --line: #d0d0d0; --line-strong: #999999;
+    --accent: #8a4708; --accent-2: #8a4708; --glow: transparent; --shadow: none;
+  }
+  html, body { background: #ffffff !important; color: #111111; font-size: 11pt; line-height: 1.45; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+
+  /* Screen-only chrome */
+  #scene, .scroll-progress, .topnav, .skip-link, .hero-foot, .hero-eyebrow,
+  .section-hint, .skills-viewport, .js-only, .contact-links, .caret { display: none !important; }
+
+  /* Everything visible, nothing waiting for a scroll reveal */
+  .reveal, .js .reveal { opacity: 1 !important; transform: none !important; }
+  .hero-name .ch, .hero-headline, .hero-links { opacity: 1 !important; transform: none !important; filter: none !important; }
+
+  .container { max-width: none; padding-inline: 0; }
+  .hero { min-height: 0; padding: 0 0 10pt; border-bottom: 1.5pt solid #111111; }
+  .hero-name { font-size: 24pt; max-width: none; }
+  .hero-headline { margin-top: 4pt; font-size: 12pt; }
+  .section { padding-block: 12pt 0; }
+  .section-head { margin-bottom: 6pt; }
+  .section-head .eyebrow { display: none; }
+  .section-title { font-size: 14pt; border-bottom: .75pt solid var(--line); padding-bottom: 2pt; }
+  .subhead { margin-top: 10pt; }
+
+  .panel, .skill-group {
+    background: none !important; border: 0; box-shadow: none; padding: 0;
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+    overflow: visible; break-inside: avoid;
+  }
+  .panel::before, .skill-group::before { display: none; }
+  .timeline { padding-left: 0; }
+  .timeline::before, .timeline-node, .cert-badge { display: none; }
+  .bullets li { break-inside: avoid; }
+
+  .skills-layout { display: block; }
+  .skills-grid, .cert-grid { grid-template-columns: repeat(2, 1fr); gap: 6pt 18pt; }
+  .skill-heading { margin-bottom: 4pt; }
+  .skill-heading::after { display: none; }
+  .chips { gap: 3pt; }
+  .chips li { border: .75pt solid var(--line-strong); background: none; color: #111111; padding: 0 5pt; }
+
+  /* Links: show where they go, since paper cannot be clicked */
+  .btn { border: 0; background: none !important; color: #111111 !important; padding: 0; min-height: 0; gap: 0; box-shadow: none; }
+  .btn svg { display: none; }
+  .hero-links { gap: 2pt 16pt; margin-top: 6pt; }
+  .hero-links a[href^="http"]::after, .cert a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444444; word-break: break-all; }
+  .hero-links a[href^="mailto:"]::after { content: ": salmanmohammed703@gmail.com"; }
+  .contact-email { font-size: 14pt; color: #111111 !important; -webkit-text-fill-color: #111111; background: none !important; }
+
+  h2, h3, h4 { break-after: avoid; }
+  .footer { background: none; border-top: .75pt solid var(--line); padding: 6pt 0 0; margin-top: 12pt; }
+  .footer .link { display: none; }
+}
