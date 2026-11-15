@@ -391,6 +391,28 @@ body.scrolled .topnav {
 .about-panel { max-width: 860px; }
 .lead { font-size: clamp(1.1rem, 2.4vw, 1.35rem); line-height: 1.65; }
 
+/* Quick facts: a scannable summary for recruiters under the About text */
+.facts {
+  display: grid; grid-template-columns: 1fr; gap: 10px;
+  margin: 1.5rem 0 0; padding-top: 1.25rem; border-top: 1px dashed var(--line-strong);
+}
+@media (min-width: 560px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 860px) { .facts { grid-template-columns: repeat(3, 1fr); } }
+.fact {
+  min-width: 0; padding: 12px 14px; border-radius: 12px;
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  background: var(--surface-strong);
+  transition: transform .25s var(--ease), border-color .25s var(--ease);
+}
+.fact:hover { transform: translateY(-2px); border-color: var(--line-strong); border-left-color: var(--accent-2); }
+.fact dt {
+  font-family: var(--mono); font-size: .72rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+}
+.fact dd { margin: 4px 0 0; font-size: 1rem; font-weight: 650; overflow-wrap: anywhere; }
+.motion-off .fact:hover { transform: none; }
+@media (prefers-reduced-motion: reduce) { .fact { transition: none; } .fact:hover { transform: none; } }
+
 .panel-head {
   display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 10px 24px;
   margin-bottom: 1.25rem;
