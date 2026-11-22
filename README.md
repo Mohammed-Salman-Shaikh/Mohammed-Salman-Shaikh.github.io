@@ -30,7 +30,7 @@ Adobe Certified AEM Professional and AWS Certified Cloud Practitioner.
 ## Highlights
 
 - **Software Engineer, Capgemini** (June 2024 to Present): backend services in Java and
-  Spring Boot for Atlas Copco's global career portal, RESTful APIs with Sling servlets and
+  Spring Boot for Atlas Copco's global website (including its other brands), RESTful APIs with Sling servlets and
   OSGi services, an automated job-expiry feature, and an event-driven asset-publish
   notification system, deployed on Microsoft Azure with Maven/Jenkins CI/CD.
 - **ChatIQ, AI chat application** (Nov 2023): full-stack MERN chatbot using the OpenAI API,
@@ -43,8 +43,10 @@ No framework, no build step and no external libraries. It is hosted on GitHub Pa
 
 - **3D skill graph:** a canvas graph built live from the Skills section. Hover, focus or tap
   a skill group to highlight it.
+- **Click sparks:** a small burst of sparks wherever you click or tap, drawn on its own
+  canvas only while it plays. Turned off by the pause button and by reduced-motion settings.
 - **Light and dark themes:** follows your system setting, with a toggle in the top bar.
-- **Accessible motion:** a pause button for the animation, plus a skip link and keyboard
+- **Accessible motion:** a pause button for all animation, plus a skip link and keyboard
   focus on every skill group.
 - **Mobile first:** works from a 360px phone up to a wide laptop screen.
 
