@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mohammed Salman Shaikh - Java Backend Developer, Java + Spring Boot, Capgemini, Bangalore">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07080d" media="(prefers-color-scheme: dark)">
   <title>Mohammed Salman Shaikh | Java Backend Developer</title>
   <link rel="canonical" href="https://mohammed-salman-shaikh.github.io/">
   <!-- Link previews (LinkedIn, WhatsApp, Slack, X) -->
@@ -17,6 +19,24 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mohammed Salman Shaikh | Java Backend Developer">
   <meta name="twitter:description" content="Java Backend Developer, 2+ years, Java + Spring Boot, Capgemini, Bangalore">
+  <!-- Structured data for search engines (facts from resume.md only) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Salman Shaikh",
+    "jobTitle": "Java Backend Developer",
+    "worksFor": { "@type": "Organization", "name": "Capgemini" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Presidency University, Bangalore" },
+    "url": "https://mohammed-salman-shaikh.github.io/",
+    "email": "mailto:salmanmohammed703@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/mohammed--salman/",
+      "https://github.com/Mohammed-Salman-Shaikh"
+    ],
+    "knowsAbout": ["Java", "Spring Boot", "Hibernate", "JPA", "RESTful API Design", "Microservices", "Adobe Experience Manager", "Microsoft Azure"]
+  }
+  </script>
   <script>
     // Apply saved theme before paint (avoids a flash of the wrong theme)
     (function () {
@@ -32,6 +52,8 @@
 
   <!-- Live 3D system graph: built from the Skills section below -->
   <canvas id="scene" aria-hidden="true"></canvas>
+  <!-- Click sparks: a short burst drawn wherever you click or tap -->
+  <canvas id="sparks" aria-hidden="true"></canvas>
   <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
   <nav class="topnav" aria-label="Primary">
@@ -126,11 +148,11 @@
                 <p class="panel-meta">June 2024 to Present<br><span>Bangalore, India</span></p>
               </header>
               <ul class="bullets">
-                <li>Designed, built and maintained backend services in Java and Spring Boot for Atlas Copco's global career portal, supporting job listing and application workflows for a multinational client.</li>
+                <li>Designed, built and maintained backend services in Java and Spring Boot for Atlas Copco's global website, including its other brands, supporting job listing and application workflows for a multinational client.</li>
                 <li>Designed and exposed RESTful APIs using Sling servlets and OSGi-based modular Java services, keeping business logic reusable and decoupled.</li>
                 <li>Contributed to microservices-based systems built with Java, Spring and Node.js, integrating backend functionality across service boundaries.</li>
                 <li>Wrote and maintained JUnit test suites to validate business logic, catch regressions early and improve code reliability.</li>
-                <li>Engineered an automated job-expiry feature for the career portal, improving data accuracy and reducing manual content maintenance.</li>
+                <li>Engineered an automated job-expiry feature for the website's job listings, improving data accuracy and reducing manual content maintenance.</li>
                 <li>Designed an event-driven asset-publish notification system, automating stakeholder alerts on content updates.</li>
                 <li>Deployed, configured and monitored applications on Microsoft Azure, working on Maven/Jenkins CI/CD pipelines with Git version control to streamline releases.</li>
                 <li>Implemented role-based access control and security policies, managing user permissions in line with best practices.</li>
@@ -838,6 +860,64 @@
         ctx.fillText(txt, x, y);
       });
     }
+
+
+    /* =====================================================
+       CLICK SPARKS: a short burst of rays wherever the page
+       is clicked or tapped. Drawn on its own canvas, only
+       while a burst is alive, and skipped when motion is off.
+       ===================================================== */
+    (function clickSparks() {
+      var sc = document.getElementById('sparks');
+      var sx = sc.getContext('2d');
+      var bursts = [], running = false, sw = 0, sh = 0;
+      var LIFE = 500, RAYS = 9, REACH = 34, LEN = 13;
+      function size() {
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        sw = innerWidth; sh = innerHeight;
+        sc.width = Math.round(sw * dpr); sc.height = Math.round(sh * dpr);
+        sx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      }
+      function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+      function tick(now) {
+        sx.clearRect(0, 0, sw, sh);
+        sx.lineCap = 'round';
+        for (var b = bursts.length - 1; b >= 0; b--) {
+          var bu = bursts[b], t = (now - bu.start) / LIFE;
+          if (t >= 1) { bursts.splice(b, 1); continue; }
+          var e = easeOut(t), fade = 1 - t;
+          // soft ring that widens and fades
+          sx.strokeStyle = rgba(C.b, 0.35 * fade);
+          sx.lineWidth = 1;
+          sx.beginPath(); sx.arc(bu.x, bu.y, 4 + e * REACH * 0.7, 0, 6.283); sx.stroke();
+          // rays fly outward and shrink to nothing
+          bu.rays.forEach(function (r, k) {
+            var d0 = 4 + e * REACH * r.reach, len = LEN * r.reach * fade;
+            var cx = Math.cos(r.a), cy = Math.sin(r.a);
+            sx.strokeStyle = rgba(k % 3 === 2 ? C.b : C.a, 0.95 * fade);
+            sx.lineWidth = 2 * fade + 0.5;
+            sx.beginPath();
+            sx.moveTo(bu.x + cx * d0, bu.y + cy * d0);
+            sx.lineTo(bu.x + cx * (d0 + len), bu.y + cy * (d0 + len));
+            sx.stroke();
+          });
+        }
+        if (bursts.length) requestAnimationFrame(tick);
+        else running = false;
+      }
+      addEventListener('pointerdown', function (ev) {
+        if (!motionOn || ev.button > 0) return;
+        if (!sw) size();
+        var turn = Math.random() * 6.283, rays = [];
+        for (var k = 0; k < RAYS; k++) {
+          rays.push({ a: turn + (k / RAYS) * 6.283 + (Math.random() - 0.5) * 0.3, reach: 0.8 + Math.random() * 0.4 });
+        }
+        bursts.push({ x: ev.clientX, y: ev.clientY, start: performance.now(), rays: rays });
+        if (bursts.length > 12) bursts.shift();
+        if (!running) { running = true; requestAnimationFrame(tick); }
+      }, { passive: true });
+      addEventListener('resize', function () { sw = 0; if (running) size(); });
+    })();
 
     readColors();
     resize();
