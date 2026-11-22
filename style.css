@@ -132,6 +132,14 @@ body[data-shot="skills"] #scene { opacity: 1; }
 
 header, main, footer { position: relative; z-index: 1; }
 
+/* ---------- Click sparks (drawn above content, never blocks clicks) ---------- */
+#sparks {
+  position: fixed; inset: 0;
+  width: 100vw; height: 100vh;
+  z-index: 70;
+  pointer-events: none;
+}
+
 /* ---------- Scroll progress ---------- */
 .scroll-progress {
   position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 60;
@@ -581,7 +589,7 @@ body.scrolled .topnav {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 
   /* Screen-only chrome */
-  #scene, .scroll-progress, .topnav, .skip-link, .hero-foot, .hero-eyebrow,
+  #scene, #sparks, .scroll-progress, .topnav, .skip-link, .hero-foot, .hero-eyebrow,
   .section-hint, .skills-viewport, .js-only, .contact-links, .caret { display: none !important; }
 
   /* Everything visible, nothing waiting for a scroll reveal */
