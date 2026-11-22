@@ -45,15 +45,17 @@
       try { var t = localStorage.getItem('theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {}
     })();
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body data-shot="hero">
   <a class="skip-link" href="#about">Skip to content</a>
 
   <!-- Live 3D system graph: built from the Skills section below -->
   <canvas id="scene" aria-hidden="true"></canvas>
-  <!-- Click sparks: a short burst drawn wherever you click or tap -->
-  <canvas id="sparks" aria-hidden="true"></canvas>
+  <!-- Click sparks: a short burst drawn wherever you click or tap.
+       Positioned inline so it stays pinned to the screen even if an old
+       cached style.css is served. -->
+  <canvas id="sparks" aria-hidden="true" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:70;pointer-events:none"></canvas>
   <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
 
   <nav class="topnav" aria-label="Primary">
@@ -874,7 +876,9 @@
       var LIFE = 500, RAYS = 9, REACH = 34, LEN = 13;
       function size() {
         var dpr = Math.min(window.devicePixelRatio || 1, 2);
-        sw = innerWidth; sh = innerHeight;
+        // match the canvas to the visible viewport, in CSS pixels
+        sw = document.documentElement.clientWidth; sh = innerHeight;
+        sc.style.width = sw + 'px'; sc.style.height = sh + 'px';
         sc.width = Math.round(sw * dpr); sc.height = Math.round(sh * dpr);
         sx.setTransform(dpr, 0, 0, dpr, 0, 0);
       }
