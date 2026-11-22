@@ -17,11 +17,11 @@ Java Backend Developer with 2+ years of experience building server-side applicat
 
 ## Experience
 ### Software Engineer, Capgemini, June 2024 to Present (Bangalore, India)
-- Designed, built and maintained backend services in Java and Spring Boot for Atlas Copco's global career portal, supporting job listing and application workflows for a multinational client.
+- Designed, built and maintained backend services in Java and Spring Boot for Atlas Copco's global website, including its other brands, supporting job listing and application workflows for a multinational client.
 - Designed and exposed RESTful APIs using Sling servlets and OSGi-based modular Java services, keeping business logic reusable and decoupled.
 - Contributed to microservices-based systems built with Java, Spring and Node.js, integrating backend functionality across service boundaries.
 - Wrote and maintained JUnit test suites to validate business logic, catch regressions early and improve code reliability.
-- Engineered an automated job-expiry feature for the career portal, improving data accuracy and reducing manual content maintenance.
+- Engineered an automated job-expiry feature for the website's job listings, improving data accuracy and reducing manual content maintenance.
 - Designed an event-driven asset-publish notification system, automating stakeholder alerts on content updates.
 - Deployed, configured and monitored applications on Microsoft Azure, working on Maven/Jenkins CI/CD pipelines with Git version control to streamline releases.
 - Implemented role-based access control and security policies, managing user permissions in line with best practices.
