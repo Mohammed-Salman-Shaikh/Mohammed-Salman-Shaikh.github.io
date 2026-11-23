@@ -45,7 +45,7 @@
       try { var t = localStorage.getItem('theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {}
     })();
   </script>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body data-shot="hero">
   <a class="skip-link" href="#about">Skip to content</a>
@@ -197,6 +197,13 @@
           <p class="eyebrow"><span class="idx">04</span> Skills</p>
           <h2 class="section-title">Skills</h2>
           <p class="section-hint js-only">Hover, focus or tap a group to find it in the 3D graph behind this page.</p>
+        </div>
+        <div class="skill-filter js-only reveal" role="search">
+          <label for="skill-search" class="skill-filter-label">Find a skill</label>
+          <div class="skill-filter-row">
+            <input type="search" id="skill-search" class="skill-filter-input" placeholder="e.g. Spring, AEM, Azure" autocomplete="off" spellcheck="false" aria-describedby="skill-count">
+            <p id="skill-count" class="skill-count" aria-live="polite"></p>
+          </div>
         </div>
         <div class="skills-layout">
         <div class="skills-grid">
@@ -361,6 +368,34 @@
         showCopy('Could not copy. The address is ' + email + '.', false);
       });
     });
+
+    /* ---------- Skill filter ---------- */
+    var skillInput = document.getElementById('skill-search');
+    var skillCount = document.getElementById('skill-count');
+    var skillGroups = document.querySelectorAll('.skill-group');
+    var skillTotal = document.querySelectorAll('.skill-group .chips li').length;
+    function filterSkills() {
+      var q = skillInput.value.trim().toLowerCase(), hits = 0, groupsHit = 0;
+      Array.prototype.forEach.call(skillGroups, function (g) {
+        var groupHits = 0;
+        Array.prototype.forEach.call(g.querySelectorAll('.chips li'), function (li) {
+          var match = q !== '' && li.textContent.toLowerCase().indexOf(q) !== -1;
+          li.classList.toggle('is-match', match);
+          if (match) groupHits++;
+        });
+        hits += groupHits;
+        if (groupHits) groupsHit++;
+        g.classList.toggle('is-dim', q !== '' && groupHits === 0);
+      });
+      skillCount.textContent = q === '' ? skillTotal + ' skills in ' + skillGroups.length + ' groups'
+        : hits === 0 ? 'No match for "' + skillInput.value.trim() + '"'
+        : hits + (hits === 1 ? ' skill' : ' skills') + ' in ' + groupsHit + (groupsHit === 1 ? ' group' : ' groups');
+    }
+    skillInput.addEventListener('input', filterSkills);
+    skillInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && skillInput.value) { e.preventDefault(); skillInput.value = ''; filterSkills(); }
+    });
+    filterSkills();
 
     /* ---------- Theme ---------- */
     var themeBtn = document.getElementById('theme-toggle');
