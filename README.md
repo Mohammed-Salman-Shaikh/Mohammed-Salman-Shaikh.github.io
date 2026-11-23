@@ -43,6 +43,8 @@ No framework, no build step and no external libraries. It is hosted on GitHub Pa
 
 - **3D skill graph:** a canvas graph built live from the Skills section. Hover, focus or tap
   a skill group to highlight it.
+- **Skill finder:** type into the box above Skills (for example "Spring" or "Azure") to
+  highlight matching skills and fade the groups that have none. Escape clears it.
 - **Click sparks:** a small burst of sparks wherever you click or tap, drawn on its own
   canvas only while it plays. Turned off by the pause button and by reduced-motion settings.
 - **Light and dark themes:** follows your system setting, with a toggle in the top bar.
