@@ -440,7 +440,17 @@ body.scrolled .topnav {
   content: ""; position: absolute; left: 2px; top: .62em;
   width: 8px; height: 8px; transform: rotate(45deg);
   border: 1.5px solid var(--accent); border-radius: 2px;
+  transition: background-color .25s var(--ease), transform .25s var(--ease);
 }
+/* Key terms read like a highlighter pass, so recruiters can skim */
+.bullets strong {
+  font-weight: 650; color: var(--ink);
+  background: linear-gradient(transparent 62%, color-mix(in srgb, var(--accent) 22%, transparent) 0);
+  border-radius: 2px; padding: 0 1px;
+}
+.bullets li:hover::before { background: var(--accent); transform: rotate(135deg); }
+@media (prefers-reduced-motion: reduce) { .bullets li::before { transition: none; } }
+.motion-off .bullets li::before { transition: none; }
 
 /* Timeline */
 .timeline { position: relative; padding-left: 26px; }
@@ -635,6 +645,7 @@ body.scrolled .topnav {
   .timeline { padding-left: 0; }
   .timeline::before, .timeline-node, .cert-badge { display: none; }
   .bullets li { break-inside: avoid; }
+  .bullets strong { background: none; padding: 0; }
 
   .skills-layout { display: block; }
   .skills-grid, .cert-grid { grid-template-columns: repeat(2, 1fr); gap: 6pt 18pt; }
