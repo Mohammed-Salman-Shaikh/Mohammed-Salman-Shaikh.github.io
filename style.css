@@ -452,6 +452,16 @@ body.scrolled .topnav {
 @media (prefers-reduced-motion: reduce) { .bullets li::before { transition: none; } }
 .motion-off .bullets li::before { transition: none; }
 
+/* Experience bullets grouped by theme, so recruiters can scan by area */
+.work-groups { display: grid; gap: 1.4rem; }
+@media (min-width: 900px) { .work-groups { grid-template-columns: repeat(2, 1fr); gap: 1.6rem 2rem; } }
+.work-label {
+  display: flex; align-items: center; gap: 10px; margin-bottom: .7rem;
+  font-family: var(--mono); font-size: .78rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+}
+.work-label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
 /* Timeline */
 .timeline { position: relative; padding-left: 26px; }
 .timeline::before {
@@ -645,6 +655,9 @@ body.scrolled .topnav {
   .timeline { padding-left: 0; }
   .timeline::before, .timeline-node, .cert-badge { display: none; }
   .bullets li { break-inside: avoid; }
+  .work-groups { display: block; }
+  .work-group + .work-group { margin-top: 6pt; }
+  .work-label { margin-bottom: 3pt; color: #111111; }
   .bullets strong { background: none; padding: 0; }
 
   .skills-layout { display: block; }
