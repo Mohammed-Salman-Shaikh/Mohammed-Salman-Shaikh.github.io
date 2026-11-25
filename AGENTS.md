@@ -33,6 +33,17 @@ so index.html must stay in the root of this folder.
 - Section order, only where facts exist: Hero (name, one-line headline,
   links), About, Experience, Projects, Skills, Education, Contact.
 
+## Git commits
+- Every commit must be authored and committed as me, never as Claude or
+  any bot. Before committing, run inside the repo:
+  git config user.name "Mohammed Salman Shaikh"
+  git config user.email "69892372+Mohammed-Salman-Shaikh@users.noreply.github.com"
+  git config commit.gpgsign false
+- No "Co-Authored-By: Claude" or "Claude-Session:" lines in commit messages.
+- Before pushing, check git log -1 shows me as author and committer.
+- In pull request descriptions, credit me as
+  "Requested by **Mohammed-Salman-Shaikh**", never by any other name.
+
 ## Never
 - Never add a dependency, framework or build tool without asking me first.
 - Never invent anything about me. If you need a fact, ask me.
