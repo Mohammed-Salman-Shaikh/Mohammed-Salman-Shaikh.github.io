@@ -41,6 +41,8 @@ so index.html must stay in the root of this folder.
   git config commit.gpgsign false
 - No "Co-Authored-By: Claude" or "Claude-Session:" lines in commit messages.
 - Before pushing, check git log -1 shows me as author and committer.
+- In pull request descriptions, credit me as
+  "Requested by **Mohammed-Salman-Shaikh**", never by any other name.
 
 ## Never
 - Never add a dependency, framework or build tool without asking me first.
