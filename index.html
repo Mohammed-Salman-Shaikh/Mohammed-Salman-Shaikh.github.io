@@ -147,7 +147,7 @@
                   <h3 class="panel-title">Software Engineer</h3>
                   <p class="panel-org">Capgemini</p>
                 </div>
-                <p class="panel-meta">June 2024 to Present<br><span>Bangalore, India</span></p>
+                <p class="panel-meta">June 2024 to Present<br><span>Bangalore, India</span><br><span class="tenure" data-since="2024-06" hidden></span></p>
               </header>
               <div class="work-groups">
                 <div class="work-group">
@@ -353,6 +353,20 @@
     };
 
     /* ---------- Copy email ---------- */
+    // Time in role, counted live from the start month in resume.md (June 2024)
+    Array.prototype.forEach.call(document.querySelectorAll('.tenure[data-since]'), function (el) {
+      var p = el.getAttribute('data-since').split('-');
+      var now = new Date();
+      var months = (now.getFullYear() - +p[0]) * 12 + (now.getMonth() + 1 - +p[1]) + 1;
+      if (!(months > 0)) return;
+      var y = Math.floor(months / 12), m = months % 12, parts = [];
+      if (y) parts.push(y + (y === 1 ? ' yr' : ' yrs'));
+      if (m) parts.push(m + (m === 1 ? ' mo' : ' mos'));
+      el.textContent = parts.join(' ');
+      el.title = 'Time in role, counted from June 2024';
+      el.hidden = false;
+    });
+
     var copyBtn = document.getElementById('copy-email');
     var copyStatus = document.getElementById('copy-status');
     var copyTimer;
