@@ -561,6 +561,34 @@ body.scrolled .topnav {
 .cert-badge .tick { stroke: var(--accent-2); stroke-width: 2; stroke-linecap: round; }
 .cert-title { font-size: 1.05rem; font-weight: 700; line-height: 1.35; }
 .cert .link { margin-top: auto; align-self: flex-start; }
+.panel-head:last-child { margin-bottom: 0; }
+.edu-main { display: flex; align-items: flex-start; gap: 16px; min-width: 0; }
+.edu-badge { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface-strong); }
+.edu-badge svg { width: 30px; height: 30px; }
+@media (max-width: 479px) { .edu-main { gap: 12px; } .edu-badge { width: 42px; height: 42px; border-radius: 12px; } .edu-badge svg { width: 24px; height: 24px; } }
+/* Cert cards: lift, accent bar and a small badge turn on hover or keyboard focus */
+.cert, .edu { transition: translate .3s var(--ease), border-color .3s var(--ease); }
+/* Keeps the scroll-reveal fade while the hover lift stays quick and undelayed */
+.js .reveal.cert, .js .reveal.edu {
+  transition: opacity .9s var(--ease), transform .9s var(--ease), translate .3s var(--ease), border-color .3s var(--ease);
+  transition-delay: var(--d, 0ms), var(--d, 0ms), 0s, 0s;
+}
+.cert::after, .edu::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease);
+}
+.cert:hover, .cert:focus-within, .edu:hover { translate: 0 -3px; border-color: var(--line-strong); }
+.cert:hover::after, .cert:focus-within::after, .edu:hover::after { transform: scaleX(1); }
+.cert-badge svg { transition: transform .4s var(--ease); }
+.cert:hover .cert-badge svg, .cert:focus-within .cert-badge svg, .edu:hover .cert-badge svg { transform: rotate(-10deg) scale(1.08); }
+.motion-off .cert, .motion-off .edu { translate: none !important; }
+.motion-off .cert-badge svg { transform: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .cert, .edu, .js .reveal.cert, .js .reveal.edu, .cert::after, .edu::after, .cert-badge svg { transition: none; }
+  .cert, .edu { translate: none !important; }
+  .cert-badge svg { transform: none !important; }
+}
 
 /* Contact */
 .contact-panel {
