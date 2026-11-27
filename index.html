@@ -45,7 +45,7 @@
       try { var t = localStorage.getItem('theme'); if (t) d.setAttribute('data-theme', t); } catch (e) {}
     })();
   </script>
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body data-shot="hero">
   <a class="skip-link" href="#about">Skip to content</a>
@@ -153,9 +153,9 @@
                 <div class="work-group">
                   <h4 class="work-label">Backend &amp; APIs</h4>
                   <ul class="bullets">
-                    <li>Designed, built and maintained backend services in <strong>Java and Spring Boot</strong> for Atlas Copco's global website, including its other brands, supporting job listing and application workflows for a multinational client.</li>
-                    <li>Designed and exposed <strong>RESTful APIs</strong> using <strong>Sling servlets</strong> and <strong>OSGi</strong>-based modular Java services, keeping business logic reusable and decoupled.</li>
-                    <li>Contributed to <strong>microservices</strong>-based systems built with Java, Spring and Node.js, integrating backend functionality across service boundaries.</li>
+                    <li id="work-spring" data-proof="Capgemini · Atlas Copco's global website" data-proof-kind="Work">Designed, built and maintained backend services in <strong>Java and Spring Boot</strong> for Atlas Copco's global website, including its other brands, supporting job listing and application workflows for a multinational client.</li>
+                    <li id="work-rest" data-proof="Capgemini · REST APIs with Sling servlets and OSGi" data-proof-kind="Work">Designed and exposed <strong>RESTful APIs</strong> using <strong>Sling servlets</strong> and <strong>OSGi</strong>-based modular Java services, keeping business logic reusable and decoupled.</li>
+                    <li id="work-micro" data-proof="Capgemini · microservices with Java, Spring and Node.js" data-proof-kind="Work">Contributed to <strong>microservices</strong>-based systems built with Java, Spring and Node.js, integrating backend functionality across service boundaries.</li>
                   </ul>
                 </div>
                 <div class="work-group">
@@ -168,13 +168,13 @@
                 <div class="work-group">
                   <h4 class="work-label">Quality &amp; testing</h4>
                   <ul class="bullets">
-                    <li>Wrote and maintained <strong>JUnit</strong> test suites to validate business logic, catch regressions early and improve code reliability.</li>
+                    <li id="work-junit" data-proof="Capgemini · JUnit test suites for business logic" data-proof-kind="Work">Wrote and maintained <strong>JUnit</strong> test suites to validate business logic, catch regressions early and improve code reliability.</li>
                   </ul>
                 </div>
                 <div class="work-group">
                   <h4 class="work-label">Cloud, CI/CD &amp; security</h4>
                   <ul class="bullets">
-                    <li>Deployed, configured and monitored applications on <strong>Microsoft Azure</strong>, working on <strong>Maven/Jenkins CI/CD</strong> pipelines with Git version control to streamline releases.</li>
+                    <li id="work-azure" data-proof="Capgemini · Azure deploys, Maven/Jenkins CI/CD, Git" data-proof-kind="Work">Deployed, configured and monitored applications on <strong>Microsoft Azure</strong>, working on <strong>Maven/Jenkins CI/CD</strong> pipelines with Git version control to streamline releases.</li>
                     <li>Implemented <strong>role-based access control</strong> and security policies, managing user permissions in line with best practices.</li>
                   </ul>
                 </div>
@@ -191,7 +191,7 @@
           <p class="eyebrow"><span class="idx">03</span> Projects</p>
           <h2 class="section-title">Projects</h2>
         </div>
-        <article class="panel project reveal">
+        <article class="panel project reveal" id="project-chatiq" data-proof="ChatIQ · MERN AI chat app" data-proof-kind="Project">
           <div class="project-top">
             <div>
               <h3 class="panel-title project-title">ChatIQ<span class="dash">:</span> AI Chat Application</h3>
@@ -216,7 +216,7 @@
         <div class="section-head reveal">
           <p class="eyebrow"><span class="idx">04</span> Skills</p>
           <h2 class="section-title">Skills</h2>
-          <p class="section-hint js-only">Hover, focus or tap a group to find it in the 3D graph behind this page.</p>
+          <p class="section-hint js-only">Hover, focus or tap a group to see where each skill was used on this page.</p>
         </div>
         <div class="skill-filter js-only reveal" role="search">
           <label for="skill-search" class="skill-filter-label">Find a skill</label>
@@ -229,42 +229,51 @@
         <div class="skills-grid">
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Languages</h3>
-            <ul class="chips"><li>Java</li><li>JavaScript</li><li>Groovy</li></ul>
+            <ul class="chips"><li data-used="work-spring work-micro cert-java">Java</li><li>JavaScript</li><li>Groovy</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Backend &amp; Frameworks</h3>
-            <ul class="chips"><li>Spring Boot</li><li>Spring MVC</li><li>Hibernate</li><li>JPA</li><li>RESTful API Design</li><li>Microservices</li><li>Node.js</li></ul>
+            <ul class="chips"><li data-used="work-spring">Spring Boot</li><li>Spring MVC</li><li>Hibernate</li><li>JPA</li><li data-used="work-rest">RESTful API Design</li><li data-used="work-micro">Microservices</li><li data-used="work-micro project-chatiq">Node.js</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Adobe Experience Manager</h3>
-            <ul class="chips"><li>AEM 6.5</li><li>OSGi</li><li>Sling Servlets</li><li>JCR</li></ul>
+            <ul class="chips"><li data-used="cert-aem">AEM 6.5</li><li data-used="work-rest">OSGi</li><li data-used="work-rest">Sling Servlets</li><li>JCR</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Databases</h3>
-            <ul class="chips"><li>SQL</li><li>MySQL</li><li>MongoDB</li></ul>
+            <ul class="chips"><li>SQL</li><li>MySQL</li><li data-used="project-chatiq">MongoDB</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Cloud &amp; CI/CD</h3>
-            <ul class="chips"><li>Microsoft Azure</li><li>AWS</li><li>Jenkins</li><li>CI/CD Pipelines</li></ul>
+            <ul class="chips"><li data-used="work-azure">Microsoft Azure</li><li data-used="cert-aws">AWS</li><li data-used="work-azure">Jenkins</li><li data-used="work-azure">CI/CD Pipelines</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Build &amp; Version Control</h3>
-            <ul class="chips"><li>Maven</li><li>Git</li><li>GitHub</li></ul>
+            <ul class="chips"><li data-used="work-azure">Maven</li><li data-used="work-azure">Git</li><li>GitHub</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Testing</h3>
-            <ul class="chips"><li>JUnit</li><li>Unit Testing</li></ul>
+            <ul class="chips"><li data-used="work-junit">JUnit</li><li data-used="work-junit">Unit Testing</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Frontend</h3>
-            <ul class="chips"><li>React.js</li><li>HTML</li><li>CSS</li></ul>
+            <ul class="chips"><li data-used="project-chatiq">React.js</li><li>HTML</li><li>CSS</li></ul>
           </div>
           <div class="skill-group reveal" tabindex="0">
             <h3 class="skill-heading">Java &amp; CS Fundamentals</h3>
             <ul class="chips"><li>Object-Oriented Design (OOP)</li><li>Collections</li><li>Exception Handling</li><li>Data Structures</li><li>Algorithms</li></ul>
           </div>
         </div>
-        <div class="skills-viewport js-only" aria-hidden="true"><span id="viewport-label">live graph · pick a group</span></div>
+        <div class="skills-viewport js-only">
+          <div id="proof" class="proof" role="region" aria-labelledby="proof-title">
+            <p class="proof-kicker">Where I used it</p>
+            <h3 class="proof-title" id="proof-title">Pick a skill group</h3>
+            <p class="proof-empty" id="proof-empty">Hover or tap a group on the left. Each skill links to the work, project or certificate on this page that shows it.</p>
+            <ul class="proof-list" id="proof-list"></ul>
+            <p class="proof-more" id="proof-more" hidden></p>
+            <p class="proof-legend">Ringed nodes in the graph link to work, a project or a certificate on this page.</p>
+          </div>
+        </div>
         </div>
       </div>
     </section>
@@ -292,20 +301,20 @@
 
         <h3 class="subhead reveal">Certifications / Achievements</h3>
         <div class="cert-grid">
-          <article class="panel cert reveal">
+          <article class="panel cert reveal" id="cert-aem" data-proof="Adobe Certified Professional: AEM" data-proof-kind="Certified">
             <span class="cert-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2.5l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 21.5l-2.6-1.9-3.2.1-1-3L2.6 14.8l1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path class="tick" d="M8.5 12.2l2.3 2.3 4.7-4.8"/></svg>
             </span>
             <h4 class="cert-title">Adobe Certified Professional: Adobe Experience Manager (AEM)</h4>
             <a href="https://certification.adobe.com/credential/verify/1ea7d9d0-df6f-11ef-9883-42010a40002a" target="_blank" rel="noopener noreferrer" class="link">Verify credential <span aria-hidden="true">&#8599;</span></a>
           </article>
-          <article class="panel cert reveal">
+          <article class="panel cert reveal" id="cert-aws" data-proof="AWS Certified Cloud Practitioner" data-proof-kind="Certified">
             <span class="cert-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2.5l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 21.5l-2.6-1.9-3.2.1-1-3L2.6 14.8l1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path class="tick" d="M8.5 12.2l2.3 2.3 4.7-4.8"/></svg>
             </span>
             <h4 class="cert-title">AWS Certified Cloud Practitioner</h4>
           </article>
-          <article class="panel cert reveal">
+          <article class="panel cert reveal" id="cert-java" data-proof="Java Certification" data-proof-kind="Certified">
             <span class="cert-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 2.5l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 21.5l-2.6-1.9-3.2.1-1-3L2.6 14.8l1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path class="tick" d="M8.5 12.2l2.3 2.3 4.7-4.8"/></svg>
             </span>
@@ -586,7 +595,10 @@
       return {
         el: el,
         name: el.querySelector('.skill-heading').textContent.trim(),
-        items: Array.prototype.map.call(el.querySelectorAll('li'), function (li) { return li.textContent.trim(); })
+        items: Array.prototype.map.call(el.querySelectorAll('li'), function (li) { return li.textContent.trim(); }),
+        used: Array.prototype.map.call(el.querySelectorAll('li'), function (li) {
+          return (li.getAttribute('data-used') || '').split(' ').filter(function (id) { return document.getElementById(id); });
+        })
       };
     });
     var G = groups.length;
@@ -608,7 +620,7 @@
           bx: hub.bx + Math.cos(th) * Math.sin(phi) * rad + Math.cos(a) * 30,
           by: hub.by + Math.cos(phi) * rad * 0.85,
           bz: hub.bz + Math.sin(th) * Math.sin(phi) * rad + Math.sin(a) * 30,
-          r: 3, kind: 'leaf', label: label, g: i, ph: Math.random() * 6.28
+          r: 3, kind: 'leaf', label: label, g: i, ph: Math.random() * 6.28, proof: g.used[j].length > 0
         };
         nodes.push(leaf); leafCount++;
         edges.push({ a: hub, b: leaf, kind: 'branch', g: i });
@@ -663,12 +675,67 @@
       if (!SHOTS[name] || name === shotName) return;
       shotName = name; shot = SHOTS[name];
       body.setAttribute('data-shot', name);
-      if (name !== 'skills' && activeGroup !== -1 && !groupLocked) setGroup(-1);
+      if (name !== 'skills' && activeGroup !== -1) setGroup(-1);
       dirty = true;
     }
 
-    var groupLocked = false;
+    /* --- "Where I used it" panel: built from data-used / data-proof on the page --- */
+    var proofEl = document.getElementById('proof');
+    var proofHome = proofEl.parentNode;
+    var proofTitle = document.getElementById('proof-title');
+    var proofEmpty = document.getElementById('proof-empty');
+    var proofList = document.getElementById('proof-list');
+    var proofMore = document.getElementById('proof-more');
+    var narrowMQ = matchMedia('(max-width: 999px)');
+    function renderProof(i) {
+      proofList.textContent = '';
+      if (i === -1) {
+        proofTitle.textContent = 'Pick a skill group';
+        proofEmpty.hidden = false; proofMore.hidden = true;
+        return;
+      }
+      var g = groups[i], rest = [];
+      proofTitle.textContent = g.name;
+      proofEmpty.hidden = true;
+      g.items.forEach(function (label, j) {
+        if (!g.used[j].length) { rest.push(label); return; }
+        var li = document.createElement('li');
+        var sk = document.createElement('span'); sk.className = 'proof-skill'; sk.textContent = label;
+        var links = document.createElement('span'); links.className = 'proof-links';
+        g.used[j].forEach(function (id) {
+          var t = document.getElementById(id);
+          var a = document.createElement('a');
+          a.className = 'proof-link'; a.href = '#' + id;
+          var kind = document.createElement('span'); kind.className = 'kind';
+          kind.textContent = t.getAttribute('data-proof-kind');
+          a.appendChild(kind);
+          a.appendChild(document.createTextNode(t.getAttribute('data-proof')));
+          links.appendChild(a);
+        });
+        li.appendChild(sk); li.appendChild(links);
+        proofList.appendChild(li);
+      });
+      proofMore.hidden = rest.length === 0;
+      proofMore.textContent = rest.length ? 'Also in this group: ' + rest.join(', ') : '';
+    }
+    proofEl.addEventListener('click', function (e) {
+      var a = e.target.closest('.proof-link');
+      e.stopPropagation(); // a click inside a card's panel must not toggle the card
+      if (!a) return;
+      var t = document.getElementById(a.getAttribute('href').slice(1));
+      if (!t) return;
+      e.preventDefault();
+      t.scrollIntoView({ behavior: motionOn ? 'smooth' : 'auto', block: 'center' });
+      if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1');
+      t.focus({ preventScroll: true });
+      t.classList.remove('is-proof-hit'); void t.offsetWidth; t.classList.add('is-proof-hit');
+      setTimeout(function () { t.classList.remove('is-proof-hit'); }, 2400);
+    });
+    proofEl.addEventListener('keydown', function (e) { e.stopPropagation(); });
+
+    var groupLocked = false, leaveTimer = 0;
     function setGroup(i, lock) {
+      clearTimeout(leaveTimer);
       activeGroup = i;
       groupLocked = !!lock && i !== -1;
       groupEls.forEach(function (el, k) {
@@ -677,26 +744,45 @@
       });
       if (i === -1) hud.textContent = hudDefault;
       else hud.textContent = 'focus → ' + groups[i].name.toLowerCase();
-      var vl = document.getElementById('viewport-label');
-      if (vl) vl.textContent = i === -1 ? 'live graph · pick a group' : 'focus → ' + groups[i].name.toLowerCase() + ' · ' + groups[i].items.length;
+      renderProof(i);
+      // small screens: the proof opens inside the tapped card; wide screens: beside the graph
+      var home = narrowMQ.matches && i !== -1 ? groupEls[i] : proofHome;
+      if (proofEl.parentNode !== home) home.appendChild(proofEl);
       if (i !== -1) for (var k = 0; k < 4; k++) spawnPacket(i);
       dirty = true;
     }
+    // hovering from a card over to the panel keeps the focus, so its links can be clicked
+    function leaveSoon() {
+      if (groupLocked) return;
+      clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(function () { setGroup(-1); }, 350);
+    }
+    proofHome.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse' && activeGroup !== -1) clearTimeout(leaveTimer); });
+    proofHome.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') leaveSoon(); });
+    proofHome.addEventListener('focusout', function (e) {
+      if (!proofHome.contains(e.relatedTarget) && groupEls.indexOf(e.relatedTarget) === -1) leaveSoon();
+    });
+    narrowMQ.addEventListener('change', function () { setGroup(activeGroup, groupLocked); });
     groupEls.forEach(function (el, i) {
       el.setAttribute('role', 'button');
       el.setAttribute('aria-pressed', 'false');
       el.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse' && !groupLocked) setGroup(i); });
-      el.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse' && !groupLocked) setGroup(-1); });
+      el.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') leaveSoon(); });
       el.addEventListener('focus', function () { if (!groupLocked) setGroup(i); });
-      el.addEventListener('blur', function () { if (!groupLocked) setGroup(-1); });
+      el.addEventListener('blur', function (e) {
+        if (proofEl.contains(e.relatedTarget) || el.contains(e.relatedTarget)) return;
+        if (!groupLocked) setGroup(-1);
+      });
       el.addEventListener('click', function () {
         if (groupLocked && activeGroup === i) setGroup(-1); else setGroup(i, true);
       });
       el.addEventListener('keydown', function (e) {
+        if (e.target !== el) return;
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
         if (e.key === 'Escape') { setGroup(-1); }
       });
     });
+    renderProof(-1);
 
     addEventListener('pointermove', function (e) {
       if (e.pointerType !== 'mouse') return;
@@ -719,12 +805,25 @@
     function fog(z) {
       var near = cam.dist - 380, far = cam.dist + 520;
       var f = 1 - (z - near) / (far - near);
-      return f < 0.08 ? 0.08 : f > 1 ? 1 : f;
+      return f < 0.22 ? 0.22 : f > 1 ? 1 : f;
     }
     function lerp(a, b, t) { return a + (b - a) * t; }
     function angLerp(a, b, t) {
       var d = ((b - a + Math.PI) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2) - Math.PI;
       return a + d * t;
+    }
+
+    /* The open area of the Skills "viewport" box, above the proof panel */
+    var vpEl = document.querySelector('.skills-viewport'), labelLeft = 0;
+    function graphBox() {
+      if (!vpEl || W < 1000) return null;
+      var r = vpEl.getBoundingClientRect(), pr = proofEl.parentNode === vpEl ? proofEl.getBoundingClientRect() : null;
+      if (!r.width) return null;
+      var top = Math.max(pr ? pr.bottom : r.top, 76), bottom = Math.min(r.bottom, H), h = bottom - top;
+      // box mostly off screen: stay anchored to it rather than drifting over other content
+      if (h < 200) { top = pr ? pr.bottom : r.top; h = Math.max(240, r.bottom - top); }
+      return { cx: (r.left + r.width / 2) / W, cy: (top + h / 2) / H, zoom: Math.max(0.55, Math.min(0.9, h / 560)),
+               fit: focal * 340 / (Math.min(r.width, h) * 0.5), left: r.left };
     }
 
     /* --- Render loop --- */
@@ -744,12 +843,15 @@
       groupMix = lerp(groupMix, activeGroup === -1 ? 0 : 1, k);
 
       // camera targets
-      var tYaw = yawAuto, tf = { x: 0, y: 0, z: 0 }, tDist = shot.dist, tCx = small ? 0.5 : shot.cx;
+      var tYaw = yawAuto, tf = { x: 0, y: 0, z: 0 }, tDist = shot.dist, tCx = small ? 0.5 : shot.cx, tCy = small && shotName === 'hero' ? 0.74 : 0.5;
+      var box = shotName === 'skills' ? graphBox() : null;
+      if (box) { tCx = box.cx; tCy = box.cy; tDist = Math.max(shot.dist, box.fit); }
+      labelLeft = box ? box.left : 0;
       if (activeGroup !== -1) {
         var g = groups[activeGroup];
         tYaw = -Math.PI / 2 - g.angle;
         tf = { x: g.hub.bx * 0.92, y: g.hub.by * 0.92, z: g.hub.bz * 0.92 };
-        tDist = shot.dist * 0.62;
+        tDist = shot.dist * (box ? box.zoom : 0.62);
         yawAuto = angLerp(yawAuto, tYaw, k);
       }
       if (small) tDist *= 1.08;
@@ -757,7 +859,7 @@
       cam.pitch = lerp(cam.pitch, shot.pitch + mouse.y * 0.1, k);
       cam.dist = lerp(cam.dist, tDist, k);
       cam.cx = lerp(cam.cx, tCx, k);
-      cam.cy = lerp(cam.cy, small && shotName === 'hero' ? 0.74 : 0.5, k);
+      cam.cy = lerp(cam.cy, tCy, k);
       cam.fx = lerp(cam.fx, tf.x, k); cam.fy = lerp(cam.fy, tf.y, k); cam.fz = lerp(cam.fz, tf.z, k);
       cyw = Math.cos(cam.yaw); syw = Math.sin(cam.yaw); cpt = Math.cos(cam.pitch); spt = Math.sin(cam.pitch);
 
@@ -842,7 +944,7 @@
         if (!a || !b) return;
         var f = (fog(a.z) + fog(b.z)) / 2 * groupAlpha(e.g);
         var col = e.kind === 'ring' ? B : A;
-        var base = e.kind === 'trunk' ? 0.45 : e.kind === 'ring' ? 0.18 : 0.3;
+        var base = e.kind === 'trunk' ? 0.6 : e.kind === 'ring' ? 0.24 : 0.42;
         if (e.g === activeGroup && activeGroup !== -1) base += 0.35 * groupMix;
         ctx.strokeStyle = rgba(col, base * f);
         ctx.lineWidth = e.kind === 'trunk' ? 1.4 : 1;
@@ -897,41 +999,68 @@
         }
         ctx.fillStyle = rgba(col, f);
         ctx.beginPath(); ctx.arc(P.x, P.y, r, 0, 6.283); ctx.fill();
+        if (n.kind === 'leaf' && n.proof) {
+          // ringed skill = it links to work, a project or a certificate on this page
+          ctx.strokeStyle = rgba(A, 0.85 * f); ctx.lineWidth = 1.4;
+          ctx.beginPath(); ctx.arc(P.x, P.y, r + 3, 0, 6.283); ctx.stroke();
+        }
         if (n.kind !== 'leaf') {
           ctx.strokeStyle = rgba(col, 0.6 * f); ctx.lineWidth = 1;
           ctx.beginPath(); ctx.arc(P.x, P.y, r + 4 + (n.kind === 'core' ? Math.sin(time * 2) * 2 : 0), 0, 6.283); ctx.stroke();
         }
       });
 
-      // labels
+      // labels: placed front to back, the focused group first, and never on top of each other
       ctx.globalCompositeOperation = 'source-over';
       ctx.textBaseline = 'middle';
+      var placed = [];
+      function clash(r) {
+        if (r.x < labelLeft + 4 || r.y < 80 || r.x + r.w > W - 4 || r.y + r.h > H - 4) return true;
+        for (var q = 0; q < placed.length; q++) {
+          var o = placed[q];
+          if (r.x < o.x + o.w && r.x + r.w > o.x && r.y < o.y + o.h && r.y + r.h > o.y) return true;
+        }
+        return false;
+      }
+      var cands = [];
       vis.forEach(function (n) {
         var P = n.P, f = fog(P.z) * groupAlpha(n.g);
         var isActive = n.g === activeGroup && activeGroup !== -1;
-        var show;
         if (n.kind === 'core') {
           ctx.font = '700 ' + Math.max(9, Math.round(14 * P.s)) + 'px ui-monospace, "Cascadia Code", Consolas, monospace';
           ctx.textAlign = 'center';
           ctx.fillStyle = C.dark ? '#0b0d12' : '#ffffff';
           ctx.fillText('MS', P.x, P.y + 0.5);
+          var cr = n.r * P.s + 6;
+          placed.push({ x: P.x - cr, y: P.y - cr, w: cr * 2, h: cr * 2 });
           return;
         }
+        var show;
         if (n.kind === 'hub') show = !small || isActive || shotName === 'skills';
-        else show = isActive ? groupMix > 0.4 : (!small && shotName === 'skills' && f > 0.75);
+        else show = isActive ? groupMix > 0.4 : (!small && shotName === 'skills' && f > 0.55);
         if (!show || f < 0.2) return;
-        var big = n.kind === 'hub';
-        var fs = big ? 11 : 11;
-        ctx.font = (big ? '700 ' : '500 ') + fs + 'px ui-monospace, "Cascadia Code", Consolas, monospace';
+        cands.push({ n: n, f: f, act: isActive, pri: (isActive ? 0 : 2) + (n.kind === 'hub' ? 0 : 1) });
+      });
+      cands.sort(function (a, b) { return a.pri - b.pri || a.n.P.z - b.n.P.z; });
+      cands.forEach(function (c) {
+        var n = c.n, P = n.P, f = c.f, big = n.kind === 'hub', isActive = c.act;
+        ctx.font = (big ? '700 ' : '500 ') + (isActive ? 12 : 11) + 'px ui-monospace, "Cascadia Code", Consolas, monospace';
         var txt = big ? n.label.toUpperCase() : n.label;
-        ctx.textAlign = 'left';
-        var x = P.x + n.r * P.s + 8, y = P.y;
-        var alpha = big ? 0.9 * f : (isActive ? groupMix : 0.6 * f);
+        var w = ctx.measureText(txt).width, off = n.r * P.s + 8, h = 18;
+        var spots = [[P.x + off, P.y], [P.x - off - w, P.y], [P.x - w / 2, P.y - 16], [P.x - w / 2, P.y + 16]];
+        var pos = null;
+        for (var si = 0; si < spots.length; si++) {
+          var rect = { x: spots[si][0] - 5, y: spots[si][1] - h / 2 - 1, w: w + 10, h: h + 2 };
+          if (!clash(rect)) { pos = spots[si]; placed.push(rect); break; }
+        }
+        if (!pos) return;
+        var x = pos[0], y = pos[1];
+        var alpha = big ? Math.max(C.dark ? 0.6 : 0.85, 0.95 * f) : (isActive ? groupMix : 0.8 * f);
         if (big || isActive) {
-          var w = ctx.measureText(txt).width;
-          ctx.fillStyle = C.dark ? 'rgba(7,9,15,' + (0.7 * alpha).toFixed(3) + ')' : 'rgba(255,253,248,' + (0.85 * alpha).toFixed(3) + ')';
+          ctx.fillStyle = C.dark ? 'rgba(7,9,15,' + (0.78 * alpha).toFixed(3) + ')' : 'rgba(255,253,248,' + (0.9 * alpha).toFixed(3) + ')';
           ctx.fillRect(x - 4, y - 9, w + 8, 18);
         }
+        ctx.textAlign = 'left';
         ctx.fillStyle = rgba(big ? A : INK, alpha);
         ctx.fillText(txt, x, y);
       });

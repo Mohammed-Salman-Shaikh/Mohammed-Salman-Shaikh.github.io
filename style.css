@@ -127,8 +127,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   pointer-events: none;
   transition: opacity .8s var(--ease);
 }
-body:not([data-shot="hero"]) #scene { opacity: .75; }
+/* The graph belongs to the hero and the Skills section only: it fades out
+   behind every other section so it never sits on top of their content. */
+body:not([data-shot="hero"]):not([data-shot="skills"]) #scene { opacity: 0; }
 body[data-shot="skills"] #scene { opacity: 1; }
+/* On phones and small tablets the Skills cards carry the proof themselves */
+@media (max-width: 999px) { body[data-shot="skills"] #scene { opacity: 0; } }
 
 header, main, footer { position: relative; z-index: 1; }
 
@@ -366,7 +370,7 @@ body.scrolled .topnav {
 }
 
 /* ---------- Sections ---------- */
-.section { padding-block: clamp(4.5rem, 12vw, 8.5rem); }
+.section { padding-block: clamp(2.75rem, 6vw, 4.5rem); }
 .section-head { margin-bottom: clamp(1.8rem, 4vw, 2.8rem); }
 .section-title {
   margin-top: 10px;
@@ -502,15 +506,51 @@ body.scrolled .topnav {
   /* leave the right side open so the 3D cluster shows beside the cards */
   .skills-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: start; }
   .skills-viewport {
-    position: sticky; top: 30vh; height: 40vh; display: flex; align-items: flex-end; justify-content: flex-end;
+    position: sticky; top: 96px; height: calc(100vh - 128px); min-height: 520px;
+    display: flex; flex-direction: column; justify-content: flex-start;
     border-radius: var(--radius); border: 1px dashed var(--line-strong);
   }
-  .skills-viewport span {
-    margin: 12px; padding: 4px 10px; border-radius: 999px;
-    font-family: var(--mono); font-size: .72rem; color: var(--muted); background: var(--surface);
-  }
+  .skills-viewport > .proof { margin: 12px; max-height: 56%; overflow: auto; }
 }
 @media (max-width: 999px) { .skills-viewport { display: none; } }
+
+/* "Where I used it": each skill links to the entry on this page that shows it */
+.proof {
+  padding: 1rem 1.1rem 1.1rem; border-radius: 14px;
+  background: var(--surface-strong); border: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+}
+.proof-kicker {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 4px; font-family: var(--mono); font-size: .74rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--accent-2);
+}
+.proof-kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 10px var(--accent-2); }
+.proof-legend { margin: .7rem 0 0; font-size: .8rem; color: var(--muted); }
+.proof-title { margin: 0 0 .6rem; font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+.proof-empty { margin: 0; font-size: .95rem; color: var(--muted); }
+.proof-list { display: grid; gap: 8px; }
+.proof-list li { display: grid; grid-template-columns: minmax(7.5rem, auto) 1fr; gap: 4px 12px; align-items: baseline; }
+.proof-skill { font-family: var(--mono); font-size: .82rem; font-weight: 700; color: var(--ink); }
+.proof-links { display: flex; flex-direction: column; gap: 2px; }
+.proof-link { font-size: .92rem; color: var(--accent); text-decoration: none; }
+.proof-link:hover, .proof-link:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+.proof-link .kind {
+  margin-right: 6px; font-family: var(--mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+}
+.proof-more { margin: .7rem 0 0; font-size: .85rem; color: var(--muted); }
+.proof-more[hidden] { display: none; }
+/* Inside a tapped card on small screens */
+.skill-group > .proof { margin-top: 14px; cursor: auto; }
+.skill-group > .proof .proof-title, .skill-group > .proof .proof-legend { display: none; }
+@media (max-width: 479px) { .proof-list li { grid-template-columns: 1fr; } }
+/* The linked entry flashes so the eye lands on it */
+.is-proof-hit { animation: proof-hit 2.2s var(--ease); border-radius: 10px; }
+@keyframes proof-hit {
+  0%, 35% { box-shadow: 0 0 0 3px var(--accent); background-color: color-mix(in srgb, var(--accent) 12%, transparent); }
+  100% { box-shadow: 0 0 0 3px transparent; background-color: transparent; }
+}
+.motion-off .is-proof-hit { animation-duration: .01s; outline: 2px solid var(--accent); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .is-proof-hit { animation: none; outline: 2px solid var(--accent); outline-offset: 4px; } }
 .skill-group {
   position: relative; isolation: isolate; overflow: hidden;
   padding: 1.25rem 1.25rem 1.35rem;
