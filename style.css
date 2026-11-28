@@ -509,6 +509,7 @@ body.scrolled .topnav {
     position: sticky; top: 96px; height: calc(100vh - 128px); min-height: 520px;
     display: flex; flex-direction: column; justify-content: flex-start;
     border-radius: var(--radius); border: 1px dashed var(--line-strong);
+    margin-bottom: 32px;
   }
   .skills-viewport > .proof { margin: 12px; max-height: 56%; overflow: auto; }
 }
