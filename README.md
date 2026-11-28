@@ -47,6 +47,12 @@ No framework, no build step and no external libraries. It is hosted on GitHub Pa
   highlight matching skills and fade the groups that have none. Escape clears it.
 - **Click sparks:** a small burst of sparks wherever you click or tap, drawn on its own
   canvas only while it plays. Turned off by the pause button and by reduced-motion settings.
+- **Where I used it:** pick a skill group to see the work, project or certificate on the page
+  that shows each skill, with a link straight to it.
+- **Copy email and time in role:** a one-click copy button in Contact, and a live
+  "time in role" count next to the Capgemini dates.
+- **Footer map:** quick links to every section and to my profiles and Adobe credential.
+- **Print friendly:** printing the page gives a clean, ink-light one-column layout.
 - **Light and dark themes:** follows your system setting, with a toggle in the top bar.
 - **Accessible motion:** a pause button for all animation, plus a skip link and keyboard
   focus on every skill group.

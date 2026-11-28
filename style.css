@@ -670,8 +670,43 @@ body.scrolled .topnav {
 }
 
 /* Footer */
-.footer { padding: 2rem 0 2.5rem; border-top: 1px solid var(--line); background: var(--surface-strong); }
-.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: .9rem; color: var(--muted); }
+.footer {
+  position: relative; padding: 2.75rem 0 2rem;
+  border-top: 1px solid var(--line); background: var(--surface-strong);
+}
+.footer::before {
+  content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent) 30%, var(--accent-2) 70%, transparent);
+  opacity: .7;
+}
+.footer-grid { display: grid; gap: 28px 24px; grid-template-columns: 1fr 1fr; }
+.footer-id { grid-column: 1 / -1; display: grid; gap: 12px; align-content: start; }
+.footer-id .brand { grid-area: auto; justify-self: start; }
+.footer-name { font-weight: 700; letter-spacing: -.01em; }
+.footer-tag { margin: 0; max-width: 34ch; color: var(--muted); font-size: 1rem; }
+.footer-head {
+  margin: 0 0 10px; font-family: var(--mono); font-size: .78rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--accent);
+}
+.footer-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.footer-list a {
+  display: inline-block; padding: 6px 0; min-height: 32px;
+  color: var(--ink); text-decoration: none; font-size: 1rem;
+  transition: color .2s var(--ease), transform .2s var(--ease);
+}
+.footer-list a:hover, .footer-list a:focus-visible { color: var(--accent); transform: translateX(3px); }
+.footer-bar {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 2rem; padding-top: 1.25rem; border-top: 1px dashed var(--line-strong);
+  font-size: .9rem; color: var(--muted);
+}
+.footer-bar p { margin: 0; }
+@media (min-width: 760px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+  .footer-id { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .footer-list a { transition: none; } .footer-list a:hover { transform: none; } }
+.motion-off .footer-list a:hover { transform: none; }
 
 /* ---------- Scroll reveal ---------- */
 .js .reveal {
@@ -760,5 +795,5 @@ body.scrolled .topnav {
 
   h2, h3, h4 { break-after: avoid; }
   .footer { background: none; border-top: .75pt solid var(--line); padding: 6pt 0 0; margin-top: 12pt; }
-  .footer .link { display: none; }
+  .footer .link, .footer-grid, .footer::before { display: none; }
 }
